@@ -1,0 +1,122 @@
+/* Define custom font */
+@font-face {
+  font-family: 'Tangerine';
+  src: url('../../assets/font/Tangerine_Regular.ttf') format('truetype'),
+    url('../../assets/font/Tangerine_Regular.woff') format('woff');
+}
+
+@import 'utils/variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 62.5%;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #181818, #383838);
+  font-size: 1.2rem;
+  color: #D4D4D4;
+  font-family: sans-serif;
+}
+
+a {
+  display: block;
+  color: var(--mainColor);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+button {
+  background: rgba(255, 255, 255, .1);
+  border: solid 1px #D4D4D4;
+  border-radius: .5rem;
+  color: #D4D4D4;
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+.home {
+  position: fixed;
+  height: 2rem;
+  left: 2rem;
+  top: 2rem;
+  width: 2rem;
+  z-index: 150;
+  filter: invert(1) drop-shadow(0 0 .25rem rgba(0, 0, 0, .7));
+  transition: filter .2s;
+
+  &:active,
+  &:focus,
+  &:hover {
+    filter: invert(1) drop-shadow(0 0 .75rem var(--mainColor));
+  }
+}
+
+select {
+  padding: .2rem 1rem;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+.modal-overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  transition: all .4s;
+
+  .modal {
+    background: rgba(25, 25, 25, .95);
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem rgba(255, 255, 255, .3);
+    padding: 3rem;
+    position: relative;
+
+    p.close-modal {
+      cursor: pointer;
+      color: white;
+      font-size: 4rem;
+      margin: 0;
+      position: absolute;
+      right: 1rem;
+      top: 0;
+      user-select: none;
+      transition: color .2s;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: var(--mainColor);
+      }
+    }
+  }
+}
+
+@import 'page/main';
+@import 'listen';
+@import 'tree';
+@import 'responsive';

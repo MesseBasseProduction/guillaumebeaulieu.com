@@ -1,0 +1,11 @@
+version: "3"
+services:
+  guillaumebeaulieu.com:
+    container_name: guillaumebeaulieu.com_node
+    build: .
+    command: npm run start
+    restart: always
+    ports:
+      - 8040:8040
+    environment:
+      - NODE_ENV=prod

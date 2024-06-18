@@ -1,0 +1,64 @@
+main.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  nav {
+    background: linear-gradient(135deg, var(--gradientStart) 0%, var(--gradientEnd) 100%);
+    margin-bottom: var(--mg-lg);
+    padding: var(--mg-lg) 0;
+    text-align: center;
+    width: 100%;
+
+    h1, .artist-picture, h2, div {
+      margin: 0 auto;
+      margin-bottom: var(--mg);
+      max-width: 80%;
+    }
+
+    h1 {
+      font-family: Tangerine 'Segoe UI', sans-serif;
+      font-size: 10rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-style: italic;
+    }
+
+    .social-shortcuts {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+
+      a, img {
+        margin-bottom: 0;
+      }
+
+      img {
+        height: 4rem;
+        margin: 0 1rem;
+      }
+    }
+  }
+
+  footer {
+    background: linear-gradient(135deg, var(--gradientStart) 0%, var(--gradientEnd) 100%);
+    padding: var(--mg-lg) 0;
+    text-align: center;
+    width: 100%;
+
+    a {
+      color: white;
+      margin-bottom: 0;
+      text-decoration: none;
+      transition: color var(--transition);
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: var(--mainColor);
+      }
+    }
+  }
+}
