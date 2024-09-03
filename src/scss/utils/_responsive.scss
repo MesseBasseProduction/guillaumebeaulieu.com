@@ -1,0 +1,68 @@
+@media (max-width: 1800px) {
+  body.biography {
+    main { 
+      .content-wrapper {
+        max-width: 85%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  body.biography {
+    main { 
+      .content-wrapper {
+        grid-gap: var(--spacing);
+        grid-template-columns: 1fr;
+        max-width: 66%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+      font-size: 5rem;
+
+      a {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  nav {
+    display: inherit;
+    text-align: center;
+
+    a {
+      padding: var(--spacing-small);
+    }
+  }
+
+  .modal-overlay .modal {
+    &.modal-info {
+      max-width: 90%;
+    }
+  }
+
+  body.biography {
+    main {
+      h2 {
+        max-width: 100%;
+      }
+  
+      .content-wrapper {
+        max-width: 90%;
+        padding: var(--spacing);
+  
+        .image-container .photo-select {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,8 @@
 {
-  "bandPicture": "Band.webp",
+  "pictures": {
+    "path": ["gb1.webp", "gb2.webp"],
+    "author": ["Georges Prault", "Arthur Beaulieu"]
+  },
   "members": [
     {
       "fullName": "David Béché",

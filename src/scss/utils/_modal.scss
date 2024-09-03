@@ -1,0 +1,74 @@
+.modal-overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  transition: all .4s;
+
+  .modal {
+    background: rgba(25, 25, 25, .95);
+    border-bottom: solid 5px var(--mainColor);
+    border-top: solid 5px var(--mainColor);
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem rgba(255, 255, 255, .3);
+    padding: 3rem;
+    position: relative;
+
+    p.close-modal {
+      cursor: pointer;
+      color: white;
+      font-size: 4rem;
+      margin: 0;
+      position: absolute;
+      right: 1rem;
+      top: 0;
+      user-select: none;
+      transition: color .2s;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: var(--mainColor);
+      }
+    }
+
+    &.modal-info {
+      max-width: 66%;
+      width: 80rem;
+    
+      h1 {
+        margin-bottom: var(--spacing);
+        text-align: center;
+      }
+    
+      p {
+        margin-bottom: var(--spacing-small);
+        text-indent: var(--spacing);
+    
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    
+      a {
+        display: inline-block;
+        margin: 0;
+        text-indent: 0;
+      }
+    
+      button  {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: var(--spacing);
+      }
+    }
+  }
+}

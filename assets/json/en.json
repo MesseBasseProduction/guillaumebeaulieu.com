@@ -1,38 +1,33 @@
 {
-  "band": {
-    "name": "NAC",
-    "desc": "NAC is a Hard Rock/Progressive Rock band, founded in 1994 in Igny, France. Crafted around Pierrot and Elliot, the band's formation has often evolved to gradually consolidate from 2015. Its eclectic members put their interpretation at the service of their music; straightforward and raw."
+  "nav": {
+    "biography": "Biographie",
+    "events": "Concerts",
+    "discography": "Discographie",
+    "medias": "Médias",
+    "links": "Liens"
   },
-  "roles": {
-    "leadvocals": "Lead Singer",
-    "backvocals": "Back Vocals",
-    "guitar": "Guitar",
-    "keyboard": "Keyboard",
-    "bass": "Bass",
-    "doublebass": "Double Bass",
-    "drums": "Drums"
+  "bio": {
+    "short": "Flûtiste à Bec baroque de renommée internationale, reconnu pour sa virtuosité et son interprétation authentique des œuvres du répertoire.",
+    "content1": "<i>Guillaume Beaulieu</i> débute la flûte à bec à l'âge de dix ans au conservatoire de Massy, en région parisienne. Il obtient son DEM de flûte à bec en 2010 dans la classe de <i>Jean-Pierre Nicolas</i> au CRD de la vallée de Chevreuse avec les félicitations du jury à l’unanimité, puis il intègre la classe de <i>Pierre Hamon</i> au CNSMD de Lyon. Il y obtiendra son master en 2015 avec la mention très bien.",
+    "content2": "Son goût pour la musique ancienne le pousse à s'intéresser à la basse continue ; il complète ainsi sa formation en étudiant le clavecin avec <i>Michèle Dévérité</i> au CRD de la vallée de Chevreuse.",
+    "content3": "Cette polyvalence lui permet de se produire en France et à l’étranger (Brésil, Japon, Pologne, Hollande, Belgique, Israël…) avec différents ensembles : ensemble Pygmalion, les Nouveaux Caractères, ensemble Canzona, Orchestre Français des Jeunes Baroques.",
+    "content4": "Il a remporté plusieurs prix avec son ensemble de flûtes : le Consort Brouillamini (1<sup>er</sup> prix du Concours International des journées de musiques anciennes de Vanves 2016, Prix du public pour la saison musicale de Musée en musique de Grenoble 2015). Guillaume a également remporté en soliste le 2<sup>ème</sup> prix du concours international <i>Moeck / SRP solo recorder competition</i> 2017, le 3<sup>ème</sup> prix au concours de Nordhorn, le 3<sup>ème</sup> prix au concours international de New York en 2019 (<i>Golden Classical Music Awards</i>), ainsi que le 1<sup>er</sup> prix au concours soliste international de Tel Aviv en 2020.",
+    "content5": "Passionné par l'enseignement de son instrument, Guillaume intervient régulièrement lors de <i>masterclass</i> et enseigne la flûte à bec à l’école des arts de Marcoussis, ainsi qu’au conservatoire de Chevilly-Larue dont il est également le Directeur."
   },
-  "listenLink": "Check the discography",
-  "treeLink": "Find us online",
-  "musicians": "Musicians",
-  "works": "Pieces",
-  "videos": "Videos",
-  "learnMore": "Click to read more",
-  "pastMembers": "Past members",
-  "listenOnline": "Listen online",
-  "publishedOn": "Released on",
-  "author": "Author",
-  "composer": "Composer",
-  "seeMore": "see more",
-  "from": "from",
-  "to": "to",
-  "since": "since",
-  "close": "Close",
-  "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  "modal": {
+    "info": {
+      "title": "À propos",
+      "content1": "Ce site est édité et hébergé en France par l'Association loi 1901 Messe Basse Production (Numéro RNA W911005952, Sermaise – France). Le code source du présent site est accessible sur ce dépôt <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\">GitHub</a> et est diffusé sous la licence libre GPL-3.0.",
+      "content2": "Les contenus photographiques, textuels et audio-visuels présents sur ce site sont protégés ; toute réutilisation en dehors du présent contexte nécessite une autorisation préalable à obtenir auprès de <a href=\"mailto:contact@messe-basse-production.com\" alt=\"mail-contact\">contact@messe-basse-production.com</a> et chaque réutilisation de contenu doit être accompagnée d'une mention de l'auteur des-dits contenus.",
+      "content3": "Afin de mesurer l'audience de ce site et conformément aux recommendations de la CNIL en matière de RGPD, ce site utilise un outil d'analytics, <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\">Matomo</a> qui respecte la vie privée de ses utilisateurs. Les cookies ainsi utilisés pour mesurer l'audience ne nécessitent pas de consentement. Messe Basse Production garanti qu'aucune donnée personnelle n'est collectée et qu'aucune donnée n'a vertue à être utilisée à des fins commerciales."
+    }
+  },
+  "close": "Femer",
   "lang": {
-    "en": "🇬🇧 English",
-    "fr": "🇫🇷 French",
-    "es": "🇪🇸 Spanish",
-    "de": "🇩🇪 German"
+    "en": "🇬🇧 Anglais",
+    "fr": "🇫🇷 Français",
+    "es": "🇪🇸 Espagnol",
+    "pt": "🇵🇹 Portuguais",
+    "de": "🇩🇪 Allemand"
   }
 }

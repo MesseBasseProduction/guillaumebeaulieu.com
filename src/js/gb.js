@@ -8,18 +8,19 @@ class gb {
 
 
   constructor() {
+    // Determine language from local storage or from navigator language
     this._lang = localStorage.getItem('website-lang');
     if (this._lang === null) {
-      this._lang = (['fr', 'es', 'de', 'en'].indexOf(navigator.language.substring(0, 2)) !== -1) ? navigator.language.substring(0, 2) : 'en';
+      this._lang = (['fr', 'es', 'de', 'gb', 'en'].indexOf(navigator.language.substring(0, 2)) !== -1) ? navigator.language.substring(0, 2) : 'en';
       localStorage.setItem('website-lang', this._lang);
     }
+
     this._nls = null;
-    this._band = null;
+    this._info = null;
     this._mainScroll = null;
     this._version = '1.0.0';
-
+    // Begin website initialization
     if (DEBUG === true) { console.log(`guillaumebeaulieu.com v${this._version} : Begin website initialization`); }
-
     this._initLang()
       .then(this._fetchBandInfo.bind(this))
       .then(this._buildPage.bind(this))
@@ -40,7 +41,7 @@ class gb {
         data.json().then(nlsKeys => {
           if (DEBUG === true) { console.log(`2. Language keys successfully retrieven`); }
           this._nls = nlsKeys;
-
+          // Update select menu with supported langs
           const select = document.getElementById('lang-select');
           for (let i = 0; i < select.children.length; ++i) {
             select.children[i].innerHTML = this._nls.lang[select.children[i].value];
@@ -48,7 +49,13 @@ class gb {
               select.children[i].setAttribute('selected', true);
             }
           }
-          
+          // Update nav and shared elements between pages
+          document.querySelector('#nls-nav-biography').innerHTML = this._nls.nav.biography;
+          document.querySelector('#nls-nav-events').innerHTML = this._nls.nav.events;
+          document.querySelector('#nls-nav-discography').innerHTML = this._nls.nav.discography;
+          document.querySelector('#nls-nav-medias').innerHTML = this._nls.nav.medias;
+          document.querySelector('#nls-nav-links').innerHTML = this._nls.nav.links;
+          // Listen to lang update
           select.addEventListener('change', e => {
             localStorage.setItem('website-lang', e.target.value);
             window.location.reload();
@@ -70,10 +77,10 @@ class gb {
   _fetchBandInfo() {
     if (DEBUG === true) { console.log(`1. Fetch band links and releases`); }
     return new Promise((resolve, reject) => {
-      fetch(`assets/json/band.json`).then(data => {
-        data.json().then(bandKeys => {
+      fetch(`assets/json/info.json`).then(data => {
+        data.json().then(infoKeys => {
           if (DEBUG === true) { console.log(`2. Links and releases successfully retrieven`); }
-          this._band = bandKeys;
+          this._info = infoKeys;
           resolve();
         }).catch(err => {
           if (DEBUG === true) { console.log(`Err. Can't parse language keys, the JSON file may be is invalid`); }
@@ -92,10 +99,6 @@ class gb {
     return new Promise((resolve, reject) => {
       if (document.body.dataset.type === 'index') {
         this._buildIndexPage();
-      } else if (document.body.dataset.type === 'listen') {
-        this._buildListenPage();
-      } else if (document.body.dataset.type === 'tree') {
-        this._buildTreePage();
       } else {
         if (DEBUG === true) { console.log(`Err. Unknown page type to init the website with`); }
         reject(new Error('Invalid <body> type. Should be either index, listen or tree'));
@@ -107,13 +110,31 @@ class gb {
 
   _buildIndexPage() {
     if (DEBUG === true) { console.log(`5. Init website with the artist main page`); }
-    //document.querySelector('#band-name').innerHTML = this._nls.band.name;
+    document.querySelector('#nls-bio-short').innerHTML = this._nls.bio.short;
+    document.querySelector('#nls-bio-content1').innerHTML = this._nls.bio.content1;
+    document.querySelector('#nls-bio-content2').innerHTML = this._nls.bio.content2;
+    document.querySelector('#nls-bio-content3').innerHTML = this._nls.bio.content3;
+    document.querySelector('#nls-bio-content4').innerHTML = this._nls.bio.content4;
+    document.querySelector('#nls-bio-content5').innerHTML = this._nls.bio.content5;
+    document.querySelector('#info-modal').addEventListener('click', this._infoModal.bind(this));
+    // Handle image slideshow
+    const spans = document.querySelector('#photo-select').children;
+    for (let i = 0; i < spans.length; ++i) {
+      spans[i].addEventListener('click', () => {
+        for (let j = 0; j < spans.length; ++j) {
+          spans[j].classList.remove('active');
+        }
+        spans[i].classList.add('active');
+        document.querySelector('#artist-picture-path').src = `/assets/img/artists/${this._info.pictures.path[i]}`;
+        document.querySelector('#artist-picture-author').textContent = this._info.pictures.author[i];
+      });
+    }
     // Force timeout to wait for draw, then raf to display scroll
     setTimeout(() => {
       this._mainScroll = new window.ScrollBar({
         target: document.body,
         style: {
-          color: '#5678d4'
+          color: 'white'
         }
       });
       // Force raf after scroll creation to make scrollbar properly visible
@@ -121,202 +142,6 @@ class gb {
         this._mainScroll.updateScrollbar();
       });
     }, 100);
-  }
-
-
-  _buildListenPage() {
-    if (DEBUG === true) { console.log(`5. Init website with the artist listen page`); }
-    // Update page nls
-    document.querySelector('#release-from').innerHTML = this._nls.from;
-    document.querySelector('#listen-online').innerHTML = this._nls.listenOnline;
-    document.querySelector('#see-more-links').innerHTML = this._nls.seeMore;
-    document.querySelector('#published-on').innerHTML = this._nls.publishedOn;
-    // Internal useful variables
-    const progress = document.getElementById('current-progress');
-    const overlay = document.getElementById('modal-overlay');
-    let audio = new Audio();
-    let activeRelease = 0;
-    // Define internal functions to update UI according to selected release
-    const updateRelease = () => {
-      // Reset audio playback and playback UI
-      audio.pause();
-      audio.currentTime = 0;
-      progress.style.width = '0';
-      // Update active release
-      const release = this._band.releases[activeRelease];
-      // Update blurred backgrounds
-      document.getElementById('release-background').style.backgroundImage = `url('assets/img/releases/${release.cover}')`;
-      document.getElementById('release-background-bottom').style.backgroundImage = `url('assets/img/releases/${release.cover}')`;
-      // Update release primitive information
-      document.getElementById('release-cover').src = `assets/img/releases/${release.cover}`;
-      document.getElementById('release-duration').innerHTML = release.duration;
-      document.getElementById('release-title').innerHTML = release.title;
-      document.getElementById('release-artist').innerHTML = release.artist;
-      document.getElementById('release-date').innerHTML = this._buildReleaseDate(release.date);
-      document.getElementById('label-link').innerHTML = release.label;
-      document.getElementById('label-link').href = release.labelLink;
-      // Update view links according to the selected release
-      for (let i = 0; i < release.links.length; ++i) {
-        if (release.links[i].url === '') { // Link type has no url and should be disabled
-          document.getElementById(release.links[i].type).classList.add('disabled'); // Only disabled button
-        } else { // Update link information
-          document.getElementById(release.links[i].type).classList.remove('disabled'); // Clear previous disabled class
-          document.getElementById(release.links[i].type).href = release.links[i].url; // Update url href link
-        }
-      }
-      // Create tracks and append them to the concerned DOM
-      document.getElementById('release-tracklist').innerHTML = this._buildTrackCredits(release.tracks);
-      // Update justify content if scroll exists
-      if (document.getElementById('release-tracklist').scrollHeight > document.getElementById('release-tracklist').clientHeight) {
-        document.getElementById('release-tracklist').style.display = 'inherit';
-        setTimeout(() => {
-          const trackScroll = new window.ScrollBar({
-            target: document.getElementById('release-tracklist'),
-            style: {
-              color: this._band.styles.mainColor
-            }
-          });
-          // Force raf after scroll creation to make scrollbar properly visible
-          requestAnimationFrame(() => {
-            trackScroll.updateScrollbar();
-          });
-        }, 100);
-      }
-      audio = new Audio(`assets/audio/${release.audio}`);
-      handlePlayback(audio);
-      // Update pager selected item
-      if (this._band.releases.length < 35) {
-        document.getElementById('release-pager').children[activeRelease].classList.add('selected');
-      }
-    };
-    // Handle the audio playback and events
-    const handlePlayback = () => {
-      const button = document.getElementById('play-pause');
-      button.src = 'assets/img/controls/play.svg';
-      const progressTrack = document.getElementById('progress-bar');
-      const progress = document.getElementById('current-progress');
-      let playing = false;
-      // Handle click on play/pause button
-      button.addEventListener('click', () => {
-        if (playing === true) {
-          playing = false;
-          button.src = 'assets/img/controls/play.svg';
-          audio.pause();
-        } else {
-          playing = true;
-          button.src = 'assets/img/controls/pause.svg';
-          audio.play();
-        }
-      });
-      // Update progress on audio playing
-      audio.addEventListener('timeupdate', () => {
-        progress.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
-      });
-      // Reset progress and audio when playback reached the end of tracks
-      audio.addEventListener('ended', () => {
-        audio.currentTime = 0;
-        progress.style.width = '0';
-        button.src = 'assets/img/controls/play.svg';
-        playing = false;
-      });
-      // User manually seek a part of audio
-      progressTrack.addEventListener('click', event => {
-        if (playing === true) {
-          const box = progressTrack.getBoundingClientRect();
-          audio.currentTime = ((event.clientX - box.left) / box.width) * audio.duration;
-          progress.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
-        }
-      });
-    };
-    // Previous and next release event handling if more than one release
-    if (this._band.releases.length === 1) {
-      document.getElementById('release-previous').style.display = 'none';
-      document.getElementById('release-next').style.display = 'none';
-    } else {
-      document.getElementById('release-previous').addEventListener('click', e => {
-        e.target.blur();
-        if (this._band.releases.length < 35) {
-          document.getElementById('release-pager').children[activeRelease].classList.remove('selected');
-        }
-        activeRelease = (this._band.releases.length + activeRelease - 1) % this._band.releases.length;
-        updateRelease();
-      });
-      document.getElementById('release-next').addEventListener('click', e => {
-        e.target.blur();
-        if (this._band.releases.length < 35) {
-          document.getElementById('release-pager').children[activeRelease].classList.remove('selected');
-        }
-        activeRelease = (activeRelease + 1) % this._band.releases.length;
-        updateRelease();
-      });
-
-      if (this._band.releases.length && this._band.releases.length < 35) {
-        for (let i = 0; i < this._band.releases.length; ++i) {
-          const releasePage = document.createElement('A');
-          releasePage.innerHTML = '●';
-          releasePage.addEventListener('click', e => {
-            document.getElementById('release-pager').children[activeRelease].classList.remove('selected');
-            const parent = e.target.parentNode;
-            activeRelease = Array.prototype.indexOf.call(parent.children, e.target);
-            updateRelease();
-          });
-          releasePage.style.margin = `0 ${(3.5 / this._band.releases.length)}rem`;
-          document.getElementById('release-pager').appendChild(releasePage);
-        }
-
-        document.getElementById('release-pager').style.fontSize = `${(20 / this._band.releases.length) % 5.5}rem`;
-      }
-    }
-    // Open modal event
-    document.getElementById('see-more-links').addEventListener('click', () => {
-      fetch('assets/html/seemoremodal.html').then(data => {
-        overlay.style.display = 'flex';
-        data.text().then(htmlString => {
-          overlay.appendChild(document.createRange().createContextualFragment(htmlString));
-          const release = this._band.releases[activeRelease];
-          for (let i = 0; i < release.moreLinks.length; ++i) {
-            if (release.moreLinks[i].url === '') { // Link type has no url and should be disabled
-              document.getElementById(release.moreLinks[i].type).classList.add('disabled'); // Only disabled button
-            } else { // Update link information
-              document.getElementById(release.moreLinks[i].type).classList.remove('disabled'); // Clear previous disabled class
-              document.getElementById(release.moreLinks[i].type).href = release.moreLinks[i].url; // Update url href link
-            }
-          }
-          overlay.querySelector('#close-modal-button').innerHTML = this._nls.close;
-          requestAnimationFrame(() => overlay.style.opacity = 1);
-        });
-      }).catch(e => console.error(e));
-    });
-    // Update UI with first release available in array
-    updateRelease();
-  }
-
-
-  _buildTreePage() {
-    if (DEBUG === true) { console.log(`5. Init website with the artist link tree`); }
-    // Iterate over link to create link content
-    for (let i = 0; i < this._band.links.length; ++i) {
-      document.querySelector('#link-wrapper').innerHTML += `
-      <a href="${this._band.links[i].url}" class="link" target="_blank" rel="noopener noreferrer">
-        <img src="assets/img/logo/${this._band.links[i].type}.svg" width="25px">
-        <p>${this._band.links[i].name}</p>
-      </a>
-      `;
-    }
-    // Force timeout to wait for draw, then raf to display scroll
-    setTimeout(() => {
-      this._mainScroll = new window.ScrollBar({
-        target: document.getElementById('link-wrapper'),
-        style: {
-          color: this._band.styles.mainColor
-        }
-      });
-      // Force raf after scroll creation to make scrollbar properly visible
-      requestAnimationFrame(() => {
-        this._mainScroll.updateScrollbar();
-      });
-    }, 100);
-
   }
 
 
@@ -327,6 +152,25 @@ class gb {
 
 
   // Utils for main page
+
+
+  _infoModal() {
+    const overlay = document.getElementById('modal-overlay');
+    // Open modal event
+    fetch(`assets/html/modal/infomodal.html`).then(data => {
+      overlay.style.display = 'flex';
+      data.text().then(htmlString => {
+        const container = document.createRange().createContextualFragment(htmlString);
+        container.querySelector('#nls-modal-title').innerHTML = this._nls.modal.info.title;
+        container.querySelector('#nls-modal-content1').innerHTML = this._nls.modal.info.content1;
+        container.querySelector('#nls-modal-content2').innerHTML = this._nls.modal.info.content2;
+        container.querySelector('#nls-modal-content3').innerHTML = this._nls.modal.info.content3;
+        container.querySelector('#close-modal-button').innerHTML = this._nls.close;
+        overlay.appendChild(container);
+        setTimeout(() => overlay.style.opacity = 1, 50);
+      });
+    }).catch(e => console.error(e));
+  }
 
 
   _artistModal(artist) {

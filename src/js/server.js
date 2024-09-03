@@ -16,13 +16,25 @@ app.use(compression({
 app.use('/assets', express.static(path.join(__dirname, '../../assets'), { // Serve static files
   maxAge: '864000000' // 10 days caching for app assets
 }));
-app.get('/tree', (req, res) => {
-  console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | tree.html page requested`);
-  res.sendFile(path.join(__dirname, '../../assets/html/tree.html'));
-});
 app.get('/', (req, res) => {
   console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | index.html page requested`);
   res.sendFile(path.join(__dirname, '../../assets/html/index.html'));
+});
+app.get('/events', (req, res) => {
+  console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | events.html page requested`);
+  res.sendFile(path.join(__dirname, '../../assets/html/events.html'));
+});
+app.get('/discography', (req, res) => {
+  console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | discography.html page requested`);
+  res.sendFile(path.join(__dirname, '../../assets/html/discography.html'));
+});
+app.get('/medias', (req, res) => {
+  console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | medias.html page requested`);
+  res.sendFile(path.join(__dirname, '../../assets/html/medias.html'));
+});
+app.get('/links', (req, res) => {
+  console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | links.html page requested`);
+  res.sendFile(path.join(__dirname, '../../assets/html/links.html'));
 });
 // Start server console
 app.listen(port, () => {
