@@ -39,15 +39,22 @@
       }
     }
 
+    h1 {
+      margin-bottom: var(--spacing);
+      text-align: center;
+    }
+
+    button {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: var(--spacing);
+    }
+
     &.modal-info {
       max-width: 66%;
       width: 80rem;
-    
-      h1 {
-        margin-bottom: var(--spacing);
-        text-align: center;
-      }
-    
+        
       p {
         margin-bottom: var(--spacing-small);
         text-indent: var(--spacing);
@@ -62,12 +69,94 @@
         margin: 0;
         text-indent: 0;
       }
-    
-      button  {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: var(--spacing);
+    }
+
+    &.modal-release {
+      max-width: 90%;
+
+      .release-wrapper {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+
+        .release-cover {
+          border-radius: .5rem;
+          box-shadow: 0 0 .5rem rgba(255, 255, 255, .3);
+        }
+
+        .release-container {
+          margin-left: var(--spacing-large);
+
+          .release-info {
+            border-bottom: solid 1px var(--mainColor);
+            padding: var(--spacing-large) 0;
+
+            h2 {
+              margin-bottom: var(--spacing-tiny);
+            }
+
+            h3 {
+              text-indent: var(--spacing);
+              margin-bottom: var(--spacing);
+
+              a {
+                display: inline;
+                color: inherit;
+                font-size: inherit;
+                font-style: italic;
+                text-decoration: none;
+  
+                transition: all var(--transition);
+  
+                &:active,
+                &:focus,
+                &:hover {
+                  color: var(--mainColor)
+                }
+              }              
+            }
+
+            p {
+              text-align: right;
+            }
+          }
+
+          .release-links {
+            display: grid;
+            grid-gap: var(--spacing-small);
+            grid-template-columns: repeat(auto-fill, 20rem);
+            justify-content: space-around;
+            padding: var(--spacing-large) 0;
+
+            .link {
+              align-items: center;
+              border: solid 1px #D4D4D4;
+              border-radius: .5rem;
+              color: inherit;
+              display: flex;
+              padding: var(--spacing-tiny) var(--spacing-small);
+              text-decoration: none;
+
+              transition: all var(--transition);
+
+              &:active,
+              &:focus,
+              &:hover {
+                background-color: rgba(255, 255, 255, .3);
+              }
+
+              img {
+                box-shadow: 0 0 .5rem rgba(255, 255, 255, .3);
+                height: 2.4rem;
+                margin: 0 var(--spacing-small);
+              }
+
+              p {
+                font-weight: bold;
+              }
+            }
+          }
+        }
       }
     }
   }

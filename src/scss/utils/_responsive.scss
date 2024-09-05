@@ -1,7 +1,7 @@
 @media (max-width: 1800px) {
   body.biography {
     main { 
-      .content-wrapper {
+      .biography-wrapper {
         max-width: 85%;
       }
     }
@@ -11,11 +11,17 @@
 @media (max-width: 1400px) {
   body.biography {
     main { 
-      .content-wrapper {
+      .biography-wrapper {
         grid-gap: var(--spacing);
         grid-template-columns: 1fr;
         max-width: 66%;
       }
+    }
+  }
+
+  body.discography {
+    .releases-wrapper {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
@@ -55,7 +61,7 @@
         max-width: 100%;
       }
   
-      .content-wrapper {
+      .biography-wrapper {
         max-width: 90%;
         padding: var(--spacing);
   
@@ -63,6 +69,16 @@
           margin-top: 0;
         }
       }
+    }
+  }
+
+  body.discography {
+    h2 {
+      max-width: 100%;
+    }
+
+    .releases-wrapper {
+      grid-template-columns: 1fr;
     }
   }
 }

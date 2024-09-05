@@ -50,6 +50,128 @@ select {
   top: 2rem;
 }
 
-@import 'page/main';
+/* Page header with title, lang select and social links */
+header {
+  align-items: center;
+  border-top: solid 5px var(--mainColor);
+  display: flex;
+  justify-content: space-around;
+  height: 20rem;
+  padding: var(--spacing);
+  width: calc(100% - var(--default-scroll-size));
+
+  h1 {
+    font-family: Tangerine 'Segoe UI', sans-serif;
+    font-size: 10rem;
+
+    a {
+      color: inherit;
+      font-size: inherit;
+      text-decoration: none;
+    }
+  }
+
+  /* Lang select and artist social interaction */
+  .interaction-wrapper {
+    align-items: center;
+    display: flex;
+
+    select {
+      height: var(--spacing-large);
+      margin-right: var(--spacing);
+      position: inherit;
+    }
+  
+    .social-shortcuts {
+      display: flex;
+      justify-content: center;
+  
+      a, img {
+        margin-bottom: 0;
+      }
+  
+      img {
+        height: var(--spacing-large);
+        margin: 0 var(--spacing-tiny);
+
+        transition: all var(--transition);
+
+        &:active,
+        &:focus,
+        &:hover {
+          transform: rotate(-5deg);
+        }
+      }
+    }
+  }
+}
+/* Website navigation amongst pages */
+nav {
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: center;
+  width: calc(100% - var(--default-scroll-size));
+
+  a {
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: var(--spacing) var(--spacing-large);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: all var(--transition);
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: rgba(255, 255, 255, .3) !important;
+    }
+
+    &.active {
+      background-color: rgba(255, 255, 255, .1);
+    }
+  }
+}
+/* Page footer */
+footer {
+  border-bottom: solid 5px var(--mainColor);
+  padding: var(--spacing-large) 0;
+  text-align: center;
+  width: calc(100% - var(--default-scroll-size));
+
+  a {
+    margin-bottom: 0;
+    text-decoration: none;
+    transition: all var(--transition);
+
+    &:active,
+    &:focus,
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      min-width: 20rem;
+      max-width: 30rem;
+      width: 33%;
+    }
+  }
+
+  span {
+    cursor: pointer;
+    transition: all var(--transition);
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: var(--mainColor);
+    }
+  }
+}
+
+@import 'page/biography';
+@import 'page/discography';
 @import 'utils/modal';
 @import 'utils/responsive';
