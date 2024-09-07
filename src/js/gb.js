@@ -237,6 +237,13 @@ class gb {
           container.querySelector('#release-links').appendChild(link);
         }
 
+        new window.ScrollBar({
+          target: container.querySelector('#modal-content'),
+          style: {
+            color: 'white'
+          }
+        });
+
         overlay.appendChild(container);
         setTimeout(() => overlay.style.opacity = 1, 50);
       });

@@ -1,4 +1,13 @@
 @media (max-width: 1800px) {
+  .modal-overlay .modal {
+    &.modal-release {
+      .modal-content {
+        /* Substract button height and title height */
+        height: calc(100% - 4rem - (2 * var(--spacing)) - 2.8rem);
+      }
+    }
+  }
+
   body.biography {
     main { 
       .biography-wrapper {
@@ -9,6 +18,40 @@
 }
 
 @media (max-width: 1400px) {
+  .modal-overlay .modal {
+    &.modal-release {
+      height: 100%;
+
+      .release-wrapper {       
+        align-items: start;
+ 
+        .release-container {
+          margin-left: var(--spacing);
+
+          .release-info {
+            padding: var(--spacing) 0;
+          }
+
+          .release-links {
+            grid-gap: var(--spacing-tiny);
+            grid-template-columns: repeat(auto-fill, 15rem);
+            padding-top: var(--spacing);
+            padding-bottom: 0;
+
+            .link {
+              padding: var(--spacing-tiny);
+              margin-bottom: .5rem;
+
+              img {
+                margin: 0 var(--spacing-tiny);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   body.biography {
     main { 
       .biography-wrapper {
@@ -52,6 +95,37 @@
   .modal-overlay .modal {
     &.modal-info {
       max-width: 90%;
+    }
+
+    &.modal-release {
+      .release-wrapper {        
+        grid-template-columns: 1fr;
+        justify-items: center;
+
+        .release-container {
+          margin: 0;
+          width: 90%;
+
+          .release-info {
+            padding: var(--spacing) 0;
+            text-align: center;
+
+            p {
+              text-align: center;              
+            }
+          }
+
+          .release-links {
+            grid-gap: var(--spacing-tiny);
+            padding-top: var(--spacing);
+            padding-bottom: 0;
+
+            .link {
+              margin-bottom: .5rem;
+            }
+          }
+        }
+      }
     }
   }
 
