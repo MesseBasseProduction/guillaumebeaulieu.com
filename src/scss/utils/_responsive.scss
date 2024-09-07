@@ -67,6 +67,14 @@
       grid-template-columns: 1fr 1fr;
     }
   }
+
+  body.links {
+    main {
+      .links-wrapper {
+        max-width: 90%;        
+      }
+    }
+  }
 }
 
 @media (max-width: 1000px) {
@@ -153,6 +161,14 @@
 
     .releases-wrapper {
       grid-template-columns: 1fr;
+    }
+  }
+
+  body.links {
+    main {
+      .links-wrapper {
+        max-width: 100%;        
+      }
     }
   }
 }

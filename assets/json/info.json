@@ -278,41 +278,41 @@
   ],
   "links": [
     {
+      "type": "facebook",
+      "url": "https://facebook.com/guillaume.beaulieu.73"
+    }, {
+      "type": "instagram",
+      "url": "https://instagram.com/guillaume_beaulieu_recorder"
+    }, {
+      "type": "youtube",
+      "url": "https://youtube.com/@GuillaumeBeaulieuRecorder/"
+    }, {
       "type": "spotify",
-      "name": "Spotify",
-      "url": "https://open.spotify.com/artist/71YUgouAzYQ9NYerniOasC/"
+      "url": "https://open.spotify.com/artist/0y9nzp1xoHA1ihi3Dx1CxY/"
     }, {
       "type": "apple",
-      "name": "Apple Music",
-      "url": "https://music.apple.com/artist/nac/1588180391"
-    }, {
-      "type": "deezer",
-      "name": "Deezer",
-      "url": "https://www.deezer.com/artist/161217332"
+      "url": "https://music.apple.com/artist/guillaume-beaulieu/1677489486/"
     }, {
       "type": "amazon",
-      "name": "Amazon Music",
-      "url": "https://music.amazon.fr/artists/B0933N2ZTY/nac/"
+      "url": "https://music.amazon.fr/artists/B0088YBMI4/guillaume-beaulieu/"
+    }, {
+      "type": "deezer",
+      "url": "https://www.deezer.com/en/artist/2680111/"
+    }, {
+      "type": "qobuz",
+      "url": "https://www.qobuz.com/fr-fr/interpreter/guillaume-beaulieu/17751683"
     }, {
       "type": "tidal",
-      "name": "Tidal",
-      "url": "https://tidal.com/artist/31364715"
+      "url": "https://tidal.com/browse/artist/38011368"
     }, {
       "type": "bandcamp",
-      "name": "Bandcamp",
-      "url": "https://nacband.bandcamp.com/"
+      "url": "https://guillaumebeaulieu.bandcamp.com/"
     }, {
       "type": "discogs",
-      "name": "Discogs",
-      "url": "https://www.discogs.com/artist/10054414-NAC-7/"
-    }, {
-      "type": "genius",
-      "name": "Genius",
-      "url": "https://genius.com/artists/Nac-fra/"
+      "url": "https://www.discogs.com/artist/10064086/"
     }, {
       "type": "musicbrainz",
-      "name": "MusicBrainz",
-      "url": "https://musicbrainz.org/artist/3e3ccb24-a46b-42ee-b7d4-b87ed2d75333"
+      "url": "https://musicbrainz.org/artist/7a0be4a0-7cd0-46b8-b93e-dfb2853f3969"
     }
   ]
 }

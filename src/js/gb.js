@@ -102,9 +102,11 @@ class gb {
         this._buildBiographyPage();
       } else if (document.body.dataset.type === 'discography') {
         this._buildDiscographyPage();
+      } else if (document.body.dataset.type === 'links') {
+        this._buildLinksPage();
       } else {
         if (DEBUG === true) { console.log(`Err. Unknown page type to init the website with`); }
-        reject(new Error('Invalid <body> type. Should be either index, listen or tree'));
+        reject(new Error('Invalid <body> type. Should be either biography, events, discography, medias or links'));
       }
       resolve();
     });
@@ -160,6 +162,40 @@ class gb {
       `;
       document.querySelector('#releases-wrapper').appendChild(container);
       container.addEventListener('click', this._releaseModal.bind(this, i));
+    }
+    // Force timeout to wait for draw, then raf to display scroll
+    setTimeout(() => {
+      this._mainScroll = new window.ScrollBar({
+        target: document.body,
+        style: {
+          color: 'white'
+        }
+      });
+      // Force raf after scroll creation to make scrollbar properly visible
+      requestAnimationFrame(() => {
+        this._mainScroll.updateScrollbar();
+      });
+    }, 100);
+  }
+
+
+  _buildLinksPage() {
+    if (DEBUG === true) { console.log(`5. Init website with the artist discography page`); }
+
+    document.querySelector('#nls-links-description').innerHTML = this._nls.links.linksDescription;
+    document.querySelector('#nls-links-contact').innerHTML = this._nls.links.linksContact;
+
+    for (let i = 0; i < this._info.links.length; ++i) {
+      const container = document.createElement('A');
+      container.href= this._info.links[i].url;
+      container.setAttribute('target', '_blank');
+      container.setAttribute('rel', 'noopener');
+      container.classList.add('link');
+      container.innerHTML = `
+        <img src="/assets/img/logo/${this._info.links[i].type}.svg" alt="release-image">
+        <h1>${this._nls.links[this._info.links[i].type]}</h1>
+      `;
+      document.querySelector('#links-wrapper').appendChild(container);
     }
     // Force timeout to wait for draw, then raf to display scroll
     setTimeout(() => {
