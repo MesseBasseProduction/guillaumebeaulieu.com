@@ -1,0 +1,31 @@
+body.error-404 {
+  main {
+    padding: var(--spacing-huge);
+    text-align: center;
+
+    h1 {
+      font-size: 16rem;
+      max-width: 90%;
+    }
+
+    h2 {
+      font-size: 3rem;
+      padding: var(--spacing-huge) 0;
+      max-width: 70%;
+    }
+
+    img {
+      border-radius: .5rem;
+      box-shadow: 0 0 .5rem rgba(255, 255, 255, .1);
+      transition: all var(--transition);
+
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: rgba(255, 255, 255, .1);
+        transform: scale(1.01);
+      }
+  
+    }
+  }
+}

@@ -1,33 +1,75 @@
 {
   "nav": {
-    "biography": "Biographie",
-    "events": "Concerts",
-    "discography": "Discographie",
-    "medias": "Médias",
-    "links": "Liens"
+    "biography": "Biografía",
+    "discography": "Discografía",
+    "medias": "Medios",
+    "links": "Enlaces",
+    "error404": "La página no existe"
   },
-  "bio": {
-    "short": "Flûtiste à Bec baroque de renommée internationale, reconnu pour sa virtuosité et son interprétation authentique des œuvres du répertoire.",
-    "content1": "<i>Guillaume Beaulieu</i> débute la flûte à bec à l'âge de dix ans au conservatoire de Massy, en région parisienne. Il obtient son DEM de flûte à bec en 2010 dans la classe de <i>Jean-Pierre Nicolas</i> au CRD de la vallée de Chevreuse avec les félicitations du jury à l’unanimité, puis il intègre la classe de <i>Pierre Hamon</i> au CNSMD de Lyon. Il y obtiendra son master en 2015 avec la mention très bien.",
-    "content2": "Son goût pour la musique ancienne le pousse à s'intéresser à la basse continue ; il complète ainsi sa formation en étudiant le clavecin avec <i>Michèle Dévérité</i> au CRD de la vallée de Chevreuse.",
-    "content3": "Cette polyvalence lui permet de se produire en France et à l’étranger (Brésil, Japon, Pologne, Hollande, Belgique, Israël…) avec différents ensembles : ensemble Pygmalion, les Nouveaux Caractères, ensemble Canzona, Orchestre Français des Jeunes Baroques.",
-    "content4": "Il a remporté plusieurs prix avec son ensemble de flûtes : le Consort Brouillamini (1<sup>er</sup> prix du Concours International des journées de musiques anciennes de Vanves 2016, Prix du public pour la saison musicale de Musée en musique de Grenoble 2015). Guillaume a également remporté en soliste le 2<sup>ème</sup> prix du concours international <i>Moeck / SRP solo recorder competition</i> 2017, le 3<sup>ème</sup> prix au concours de Nordhorn, le 3<sup>ème</sup> prix au concours international de New York en 2019 (<i>Golden Classical Music Awards</i>), ainsi que le 1<sup>er</sup> prix au concours soliste international de Tel Aviv en 2020.",
-    "content5": "Passionné par l'enseignement de son instrument, Guillaume intervient régulièrement lors de <i>masterclass</i> et enseigne la flûte à bec à l’école des arts de Marcoussis, ainsi qu’au conservatoire de Chevilly-Larue dont il est également le Directeur."
+  "pages": {
+    "biography": "biografia",
+    "discography": "discografia",
+    "medias": "medios",
+    "links": "enlaces"
+  },
+  "biography": {
+    "short": "Flautista barroco de renombre internacional, reconocido por su virtuosismo e interpretación auténtica de obras del repertorio.",
+    "content1": "<i>Guillaume Beaulieu</i> comenzó a tocar la flauta dulce a los diez años en el conservatorio de Massy, en la región de París. Obtuvo su DEM en flauta dulce en 2010 en la promoción de <i>Jean-Pierre Nicolas</i> en el CRD del valle de Chevreuse con las felicitaciones unánimes del jurado, luego se unió a la promoción de <i >Pierre Hamon< /i> en el CNSMD de Lyon. Allí obtendrá su maestría en 2015 con honores.",
+    "content2": "Su gusto por la música antigua le llevó a interesarse por el bajo continuo; Así completó su formación estudiando clave con <i>Michèle Dévérité</i> en el CRD del valle de Chevreuse.",
+    "content3": "Esta versatilidad le permite actuar en Francia y en el extranjero (Brasil, Japón, Polonia, Holanda, Bélgica, Israel, etc.) con diferentes conjuntos: conjunto Pygmalion, Les Nouveaux Caractères, conjunto Canzona, Orquesta Juvenil Barroca Francesa.",
+    "content4": "Ha ganado varios premios con su conjunto de flautas: el Consort Brouillamini (1<sup>er</sup> premio del Concurso Internacional de las Jornadas de Música Antigua de Vanves 2016, Premio del Público de la temporada musical del <i>Musée en musique de Grenoble</i> 2015). Guillaume también ganó como solista el 2<sup>do</sup> premio en el concurso internacional de flauta dulce solista Moeck / SRP 2017, el 3<sup>er</sup> premio en el concurso Nordhorn, el 3<sup>er</sup> premio en el concurso internacional de Nueva York en 2019 (<i>Golden Classical Music Awards</i>), así como el 1<sup>er</sup> premio en el concurso de solistas Tel Aviv International en 2020.",
+    "content5": "Apasionado por la enseñanza de su instrumento, Guillaume habla regularmente en <i>masterclass</i> y enseña flauta dulce en la escuela de artes Marcoussis, así como en el conservatorio Chevilly-Larue, del que también es director."
+  },
+  "discography": {
+    "description": "Producciones con interpretaciones de Guillaume Beaulieu, ya sea solo o en conjunto. Haga clic en un disco para ver la información y los enlaces asociados."
+  },
+  "medias": {
+    "description": "Producciones audiovisuales en las que aparece Guillaume Beaulieu.",
+    "link": "También puedes descubrir las producciones corales en las que participa Guillaume Beaulieu en su <a href=\"https://youtube.com/@GuillaumeBeaulieuRecorder/\" target=\"_blank\" rel=\"noreferrer noopener\" >YouTube canal</a>."
+  },
+  "links": {
+    "linksDescription": "Encuentre a Guillaume Beaulieu en las redes sociales y plataformas online.",
+    "linksContact": "No dude en ponerse en contacto por correo electrónico a <a href=\"mailto:contact@messe-basse-production.com\">contact@messe-basse-production.com</a>.",
+    "7digital": "7Digital",
+    "amazon": "Amazon Music",
+    "apple": "Apple Music",
+    "bandcamp": "Bandcamp",
+    "deezer": "Deezer",
+    "discogs": "Discogs",
+    "facebook": "Facebook",
+    "fnac": "Fnac",
+    "instagram": "Instagram",
+    "musicbrainz": "MusicBrainz",
+    "qobuz": "Qobuz",
+    "soundcloud": "Soundcloud",
+    "spotify": "Spotify",
+    "tidal": "Tidal",
+    "youtube": "YouTube"
+  },
+  "page404": {
+    "title": "Error 404",
+    "description": "La página que desea ver no existe. Utilice la barra de navegación para navegar a una página específica."
   },
   "modal": {
     "info": {
-      "title": "À propos",
-      "content1": "Ce site est édité et hébergé en France par l'Association loi 1901 Messe Basse Production (Numéro RNA W911005952, Sermaise – France). Le code source du présent site est accessible sur ce dépôt <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\">GitHub</a> et est diffusé sous la licence libre GPL-3.0.",
-      "content2": "Les contenus photographiques, textuels et audio-visuels présents sur ce site sont protégés ; toute réutilisation en dehors du présent contexte nécessite une autorisation préalable à obtenir auprès de <a href=\"mailto:contact@messe-basse-production.com\" alt=\"mail-contact\">contact@messe-basse-production.com</a> et chaque réutilisation de contenu doit être accompagnée d'une mention de l'auteur des-dits contenus.",
-      "content3": "Afin de mesurer l'audience de ce site et conformément aux recommendations de la CNIL en matière de RGPD, ce site utilise un outil d'analytics, <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\">Matomo</a> qui respecte la vie privée de ses utilisateurs. Les cookies ainsi utilisés pour mesurer l'audience ne nécessitent pas de consentement. Messe Basse Production garanti qu'aucune donnée personnelle n'est collectée et qu'aucune donnée n'a vertue à être utilisée à des fins commerciales."
+      "title": "Acerca de este sitio web",
+      "content1": "Este sitio está publicado y alojado en Francia por la Asociación loi 1901 Messe Basse Production (Número RNA W911005952, Sermaise – Francia). El código fuente de este sitio está accesible en este repositorio <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\">GitHub</a> y se distribuye bajo la licencia gratuita GPL-3.0.",
+      "content2": "El contenido fotográfico, textual y audiovisual presente en este sitio está protegido; cualquier reutilización fuera de este contexto requiere la autorización previa de <a href=\"mailto:contact@messe-basse-production.com\" alt=\"mail-contact\">contact@messe-basse-production.com </a> y cada reutilización de contenidos deberá ir acompañada de una mención del autor de dicho contenido.",
+      "content3": "Para medir la audiencia de este sitio y de acuerdo con las recomendaciones de la CNIL en materia de GDPR, este sitio utiliza una herramienta de análisis, <a href=\"https://matomo.org/\" alt=\" matomo-analytics-link\">Matomo</a> que respeta la privacidad de sus usuarios. Las cookies utilizadas para medir la audiencia no requieren consentimiento. Messe Basse Production garantiza que no se recopilan datos personales y que ningún dato está destinado a ser utilizado con fines comerciales."
+    },
+    "release": {
+      "discFrom": "Un disco de",
+      "publishedOn": "Publicado el",
+      "publishedBy": "por",
+      "tracks": "pistas"
     }
   },
-  "close": "Femer",
+  "close": "Cerca",
   "lang": {
-    "en": "🇬🇧 Anglais",
-    "fr": "🇫🇷 Français",
-    "es": "🇪🇸 Espagnol",
-    "pt": "🇵🇹 Portuguais",
-    "de": "🇩🇪 Allemand"
+    "en": "🇬🇧 Inglés",
+    "fr": "🇫🇷 Francés",
+    "es": "🇪🇸 Español",
+    "pt": "🇵🇹 Portugués",
+    "de": "🇩🇪 Alemán"
   }
 }

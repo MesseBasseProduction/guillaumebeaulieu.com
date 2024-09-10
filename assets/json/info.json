@@ -8,7 +8,7 @@
       "title": "Fantaisies pour flûte seule sans basse",
       "artist": "Guillaume Beaulieu",
       "cover": "MBPLP017.webp",
-      "date": "2024-09-29",
+      "date": "2024-10-05",
       "tracks": "34",
       "duration": "01:03:48",
       "label": "Messe Basse Production",
@@ -16,37 +16,37 @@
       "links": [
         {
           "type": "youtube",
-          "url": "https://www.youtube.com/watch?v=1GvkYkuk92k&list=PLCyDwfZrEyi68e1wJCKq_oSZfLZ3ByJwo&index=1"
+          "url": ""
         }, {
           "type": "spotify",
-          "url": "https://open.spotify.com/album/4AhqxZgoJc8E9LFm2CJ43E"
+          "url": ""
         }, {
           "type": "apple",
-          "url": "https://music.apple.com/album/duos-pour-deux-fl%C3%BBtes-%C3%A0-bec/1747810814"
+          "url": ""
         }, {
           "type": "amazon",
-          "url": "https://music.amazon.com/albums/B0D4VC4V2S"
+          "url": ""
         }, {
           "type": "deezer",
-          "url": "https://www.deezer.com/album/591044492"
+          "url": ""
         }, {
           "type": "qobuz",
-          "url": "https://www.qobuz.com/album/duos-pour-deux-flutes-a-bec-guillaume-beaulieu-julien-faure/mxou6cq54l1lc"
+          "url": ""
         }, {
           "type": "tidal",
-          "url": "https://listen.tidal.com/album/364745013"
+          "url": ""
         }, {
           "type": "bandcamp",
-          "url": "https://guillaumebeaulieu.bandcamp.com/album/duos-pour-deux-fl-tes-bec"
+          "url": "https://guillaumebeaulieu.bandcamp.com/album/fantaisies-pour-fl-te-seule-sans-basse"
         }, {
           "type": "7digital",
-          "url": "https://fr.7digital.com/artist/guillaume-beaulieu-and-julien-faure/release/duos-pour-deux-fl%C3%BBtes-%C3%A0-bec-41609954"
+          "url": ""
         }, {
           "type": "musicbrainz",
-          "url": "https://musicbrainz.org/release/388c26a3-1f7f-413e-9317-982ffd7e684d"
+          "url": ""
         }, {
           "type": "discogs",
-          "url": "https://www.discogs.com/release/30931674-Guillaume-Beaulieu-Julien-Faure-Duos-Pour-Deux-Fl%C3%BBtes-%C3%A0-Bec"
+          "url": ""
         }
       ]
     }, {
@@ -274,6 +274,17 @@
           "url": "https://www.discogs.com/release/20834737-Bach-Consort-Brouillamini-Fl%C3%BBtes-En-Fugue"
         }
       ]
+    }
+  ],
+  "medias": [
+    {
+      "title": "Guillaume Beaulieu, Julien Faure – Concert: Œuvres Itraliennes au XVIII<sup>ème</sup>",
+      "url": "https://tube.mycozy.space/videos/embed/ae877fc6-28b5-46b7-98a2-7f6370bc1bc2",
+      "date": "2024-01-14"
+    }, {
+      "title": "Guillaume Beaulieu, Julien Faure – Concert: Œuvres de Corelli",
+      "url": "https://tube.mycozy.space/videos/embed/9e93a17d-dece-454f-8c59-147a2cc8a8d3",
+      "date": "2023-01-07"
     }
   ],
   "links": [

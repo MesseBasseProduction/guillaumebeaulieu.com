@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8"/>
-  <title>Guillaume Beaulieu</title>
+  <title>Guillaume Beaulieu | Médias</title>
   <meta content="ie=edge" http-equiv="x-ua-compatible"/>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
   <meta content="initial-scale=1" name="viewport"/>
@@ -41,8 +41,22 @@
   <meta name="twitter:title" content="Guillaume Beaulieu"/>
   <meta name="twitter:description" content="Guillaume Beaulieu est un Flûtiste à Bec baroque de renommée internationale, reconnu pour sa virtuosité et son interprétation authentique des œuvres du répertoire."/>
   <meta name="twitter:image:src" content="/assets/img/logo-social.png"/>
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//matomo.mycozy.space/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '41']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
 </head>
-<body data-type="index">
+<body class="medias" data-type="medias">
 <header>
   <h1 class="artist-name"><a href="/">Guillaume Beaulieu</a></h1>
   <div class="interaction-wrapper">
@@ -67,14 +81,15 @@
   </div>
 </header>
 <nav>
-  <a href="/" id="nls-nav-biography" alt="artist-biography">Biographie</a>
-  <a href="/events" id="nls-nav-events" alt="artist-events">Concerts</a>
+  <a href="/biography" id="nls-nav-biography" alt="artist-biography">Biographie</a>
   <a href="/discography" id="nls-nav-discography" alt="artist-discography">Discographie</a>
   <a href="/medias" id="nls-nav-medias" class="active" alt="artist-medias">Médias</a>
   <a href="/links" id="nls-nav-links" alt="artist-links">Liens</a>
 </nav>
 <main>
-
+  <h2 id="nls-medias-description">Productions audio-visuelles dans lesquelles Guillaume Beaulieu apparaît.</h2>
+  <div id="medias-wrapper" class="medias-wrapper"></div>
+  <h2 id="nls-medias-link">Vous pouvez également découvrir les productions d'ensembles dans lesquels Guillaume Beaulieu participe sur sa <a href="https://youtube.com/@GuillaumeBeaulieuRecorder/" target="_blank" rel="noreferrer noopener">chaîne YouTube.</a></h2>
 </main>
 <footer>
   <a href="https://messe-basse-production.com" target="_blank" rel="noreferrer noopener">
@@ -84,6 +99,7 @@
     <p>© 2024</p>
   </span>
 </footer>
+<div id="loading-overlay" class="loading-overlay"></div>
 <div id="modal-overlay" class="modal-overlay"></div>
 <script type="text/javascript" src="/assets/lib/ScrollBar.bundle.js"></script>
 <script type="text/javascript" src="/assets/dist/gb.bundle.js"></script>

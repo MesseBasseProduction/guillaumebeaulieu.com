@@ -2,7 +2,7 @@
 <html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8"/>
-  <title>Guillaume Beaulieu</title>
+  <title>Guillaume Beaulieu | Discographie</title>
   <meta content="ie=edge" http-equiv="x-ua-compatible"/>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
   <meta content="initial-scale=1" name="viewport"/>
@@ -41,6 +41,20 @@
   <meta name="twitter:title" content="Guillaume Beaulieu"/>
   <meta name="twitter:description" content="Guillaume Beaulieu est un Flûtiste à Bec baroque de renommée internationale, reconnu pour sa virtuosité et son interprétation authentique des œuvres du répertoire."/>
   <meta name="twitter:image:src" content="/assets/img/logo-social.png"/>
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//matomo.mycozy.space/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '41']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
 </head>
 <body class="discography" data-type="discography">
 <header>
@@ -67,14 +81,13 @@
   </div>
 </header>
 <nav>
-  <a href="/" id="nls-nav-biography" alt="artist-biography">Biographie</a>
-  <a href="/events" id="nls-nav-events" alt="artist-events">Concerts</a>
+  <a href="/biography" id="nls-nav-biography" alt="artist-biography">Biographie</a>
   <a href="/discography" id="nls-nav-discography" class="active" alt="artist-discography">Discographie</a>
   <a href="/medias" id="nls-nav-medias" alt="artist-medias">Médias</a>
   <a href="/links" id="nls-nav-links" alt="artist-links">Liens</a>
 </nav>
 <main>
-  <h2>Productions sur lesquels figurent des interprétations de Guillaume Beaulieu, que ce soit en solo ou en ensemble. Cliquez sur un disque voir les informations et les liens associés.</h2>
+  <h2 id="nls-disco-description">Productions sur lesquels figurent des interprétations de Guillaume Beaulieu, que ce soit en solo ou en ensemble. Cliquez sur un disque voir les informations et les liens associés.</h2>
   <div id="releases-wrapper" class="releases-wrapper"></div>
 </main>
 <footer>
@@ -85,6 +98,7 @@
     <p>© 2024</p>
   </span>
 </footer>
+<div id="loading-overlay" class="loading-overlay"></div>
 <div id="modal-overlay" class="modal-overlay"></div>
 <script type="text/javascript" src="/assets/lib/ScrollBar.bundle.js"></script>
 <script type="text/javascript" src="/assets/dist/gb.bundle.js"></script>

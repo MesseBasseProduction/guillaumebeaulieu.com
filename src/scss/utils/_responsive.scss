@@ -15,6 +15,14 @@
       }
     }
   }
+
+  body.medias {
+    main {
+      .medias-wrapper {
+        grid-template-columns: repeat(auto-fill, 40rem);
+      }
+    }
+  }
 }
 
 @media (max-width: 1400px) {
@@ -65,6 +73,14 @@
   body.discography {
     .releases-wrapper {
       grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  body.medias {
+    main {
+      .medias-wrapper {
+        max-width: 90%;
+      }
     }
   }
 
@@ -164,10 +180,54 @@
     }
   }
 
+  body.medias {
+    main {
+      .medias-wrapper {
+        grid-template-columns: repeat(auto-fill, 30rem);
+
+        h2 {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+
   body.links {
     main {
       .links-wrapper {
         max-width: 100%;        
+      }
+    }
+  }
+
+  body.error-404 {
+    main {
+      padding: var(--spacing-large) var(--spacing);
+
+      h1 {
+        font-size: 6rem;
+      }
+      
+      h2 {
+        font-size: 2rem;
+        max-width: 90%;
+        padding: var(--spacing) 0;
+      }
+
+      img {
+        max-width: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  body.discography {
+    .releases-wrapper {
+      .release {
+        img {
+          width: 17rem;
+        }
       }
     }
   }

@@ -11,10 +11,10 @@ class gb {
     // Determine language from local storage or from navigator language
     this._lang = localStorage.getItem('website-lang');
     if (this._lang === null) {
-      this._lang = (['fr', 'es', 'de', 'gb', 'en'].indexOf(navigator.language.substring(0, 2)) !== -1) ? navigator.language.substring(0, 2) : 'en';
+      this._lang = (['de', 'en', 'es', 'fr', 'pt'].indexOf(navigator.language.substring(0, 2)) !== -1) ? navigator.language.substring(0, 2) : 'en';
       localStorage.setItem('website-lang', this._lang);
     }
-
+    // Class internals for lang, translations and artist info
     this._nls = null;
     this._info = null;
     this._mainScroll = null;
@@ -25,6 +25,7 @@ class gb {
       .then(this._fetchArtistInfo.bind(this))
       .then(this._buildPage.bind(this))
       .then(this._events.bind(this))
+      .then(this._finalizeInit.bind(this))
       .catch(err => { // Error are displayed even if DEBUG is set to false, to notify end user to contact support
         console.error(`guillaumebeaulieu.com v${this._version} : Fatal error during initialization, please contact support :\n`, err);
       })
@@ -51,10 +52,13 @@ class gb {
           }
           // Update nav and shared elements between pages
           document.querySelector('#nls-nav-biography').innerHTML = this._nls.nav.biography;
-          document.querySelector('#nls-nav-events').innerHTML = this._nls.nav.events;
+          document.querySelector('#nls-nav-biography').href = `/${this._nls.pages.biography}`;
           document.querySelector('#nls-nav-discography').innerHTML = this._nls.nav.discography;
+          document.querySelector('#nls-nav-discography').href = `/${this._nls.pages.discography}`;
           document.querySelector('#nls-nav-medias').innerHTML = this._nls.nav.medias;
+          document.querySelector('#nls-nav-medias').href = `/${this._nls.pages.medias}`;
           document.querySelector('#nls-nav-links').innerHTML = this._nls.nav.links;
+          document.querySelector('#nls-nav-links').href = `/${this._nls.pages.links}`;
           // Listen to lang update
           select.addEventListener('change', e => {
             localStorage.setItem('website-lang', e.target.value);
@@ -96,17 +100,18 @@ class gb {
 
   _buildPage() {
     if (DEBUG === true) { console.log(`5. Build HTML DOM depending on the page type`); }
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
       document.querySelector('#info-modal').addEventListener('click', this._infoModal.bind(this));
       if (document.body.dataset.type === 'biography') {
         this._buildBiographyPage();
       } else if (document.body.dataset.type === 'discography') {
         this._buildDiscographyPage();
+      } else if (document.body.dataset.type === 'medias') {
+        this._buildMediasPage();
       } else if (document.body.dataset.type === 'links') {
         this._buildLinksPage();
       } else {
-        if (DEBUG === true) { console.log(`Err. Unknown page type to init the website with`); }
-        reject(new Error('Invalid <body> type. Should be either biography, events, discography, medias or links'));
+        this._build404Page();
       }
       resolve();
     });
@@ -114,13 +119,15 @@ class gb {
 
 
   _buildBiographyPage() {
-    if (DEBUG === true) { console.log(`5. Init website with the artist biography page`); }
-    document.querySelector('#nls-bio-short').innerHTML = this._nls.bio.short;
-    document.querySelector('#nls-bio-content1').innerHTML = this._nls.bio.content1;
-    document.querySelector('#nls-bio-content2').innerHTML = this._nls.bio.content2;
-    document.querySelector('#nls-bio-content3').innerHTML = this._nls.bio.content3;
-    document.querySelector('#nls-bio-content4').innerHTML = this._nls.bio.content4;
-    document.querySelector('#nls-bio-content5').innerHTML = this._nls.bio.content5;
+    if (DEBUG === true) { console.log(`5. Init website with the artist biography page`); }    
+    // Update page title
+    document.title = `Guillaume Beaulieu | ${this._nls.nav.biography}`;
+    document.querySelector('#nls-bio-short').innerHTML = this._nls.biography.short;
+    document.querySelector('#nls-bio-content1').innerHTML = this._nls.biography.content1;
+    document.querySelector('#nls-bio-content2').innerHTML = this._nls.biography.content2;
+    document.querySelector('#nls-bio-content3').innerHTML = this._nls.biography.content3;
+    document.querySelector('#nls-bio-content4').innerHTML = this._nls.biography.content4;
+    document.querySelector('#nls-bio-content5').innerHTML = this._nls.biography.content5;
     // Handle image slideshow
     const spans = document.querySelector('#photo-select').children;
     for (let i = 0; i < spans.length; ++i) {
@@ -133,25 +140,15 @@ class gb {
         document.querySelector('#artist-picture-author').textContent = this._info.pictures.author[i];
       });
     }
-    // Force timeout to wait for draw, then raf to display scroll
-    setTimeout(() => {
-      this._mainScroll = new window.ScrollBar({
-        target: document.body,
-        style: {
-          color: 'white'
-        }
-      });
-      // Force raf after scroll creation to make scrollbar properly visible
-      requestAnimationFrame(() => {
-        this._mainScroll.updateScrollbar();
-      });
-    }, 100);
   }
 
 
   _buildDiscographyPage() {
     if (DEBUG === true) { console.log(`5. Init website with the artist discography page`); }
-
+    // Update page title
+    document.title = `Guillaume Beaulieu | ${this._nls.nav.discography}`;
+    document.querySelector('#nls-disco-description').innerHTML = this._nls.discography.description;
+    // Build artist releases
     for (let i = 0; i < this._info.releases.length; ++i) {
       const container = document.createElement('DIV');
       container.classList.add('release');
@@ -163,28 +160,42 @@ class gb {
       document.querySelector('#releases-wrapper').appendChild(container);
       container.addEventListener('click', this._releaseModal.bind(this, i));
     }
-    // Force timeout to wait for draw, then raf to display scroll
-    setTimeout(() => {
-      this._mainScroll = new window.ScrollBar({
-        target: document.body,
-        style: {
-          color: 'white'
-        }
-      });
-      // Force raf after scroll creation to make scrollbar properly visible
-      requestAnimationFrame(() => {
-        this._mainScroll.updateScrollbar();
-      });
-    }, 100);
+  }
+
+
+  _buildMediasPage() {
+    if (DEBUG === true) { console.log(`5. Init website with the artist medias page`); }
+    // Update page title
+    document.title = `Guillaume Beaulieu | ${this._nls.nav.medias}`;
+    document.querySelector('#nls-medias-description').innerHTML = this._nls.medias.description;
+    document.querySelector('#nls-medias-link').innerHTML = this._nls.medias.link;
+    // Build media elements
+    for (let i = 0; i < this._info.medias.length; ++i) {
+      const date = new Intl.DateTimeFormat(this._lang, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }).format(new Date(this._info.medias[i].date));
+
+      const container = document.createElement('DIV');
+      container.classList.add('media');
+      container.innerHTML = `
+        <iframe src="${this._info.medias[i].url}" title="${this._info.medias[i].title}" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" frameborder="0"></iframe>
+        <h2>${this._info.medias[i].title}</h2>
+        <h3>${date}</h3>
+      `;
+      document.querySelector('#medias-wrapper').appendChild(container);
+    }
   }
 
 
   _buildLinksPage() {
-    if (DEBUG === true) { console.log(`5. Init website with the artist discography page`); }
-
+    if (DEBUG === true) { console.log(`5. Init website with the artist links page`); }
+    // Update page title
+    document.title = `Guillaume Beaulieu | ${this._nls.nav.links}`;
     document.querySelector('#nls-links-description').innerHTML = this._nls.links.linksDescription;
     document.querySelector('#nls-links-contact').innerHTML = this._nls.links.linksContact;
-
+    // Build artist links
     for (let i = 0; i < this._info.links.length; ++i) {
       const container = document.createElement('A');
       container.href= this._info.links[i].url;
@@ -197,19 +208,15 @@ class gb {
       `;
       document.querySelector('#links-wrapper').appendChild(container);
     }
-    // Force timeout to wait for draw, then raf to display scroll
-    setTimeout(() => {
-      this._mainScroll = new window.ScrollBar({
-        target: document.body,
-        style: {
-          color: 'white'
-        }
-      });
-      // Force raf after scroll creation to make scrollbar properly visible
-      requestAnimationFrame(() => {
-        this._mainScroll.updateScrollbar();
-      });
-    }, 100);
+  }
+
+
+  _build404Page() {
+    if (DEBUG === true) { console.log(`5. Init website with the 404 page`); }
+    // Update page title
+    document.title = `Guillaume Beaulieu | ${this._nls.nav.error404}`;
+    document.querySelector('#nls-404-title').innerHTML = this._nls.page404.title;
+    document.querySelector('#nls-404-description').innerHTML = this._nls.page404.description;
   }
 
 
@@ -219,7 +226,28 @@ class gb {
   }
 
 
-  // Utils for main page
+  _finalizeInit() {
+    return new Promise(resolve => {
+      document.querySelector('#loading-overlay').style.opacity = 0;
+      setTimeout(() => {
+        document.querySelector('#loading-overlay').style.display = 'none';
+        this._mainScroll = new window.ScrollBar({
+          target: document.body,
+          style: {
+            color: 'white'
+          }
+        });
+        // Force raf after scroll creation to make scrollbar properly visible
+        requestAnimationFrame(() => {
+          this._mainScroll.updateScrollbar();
+          resolve();
+        });
+      }, 400);
+    });
+  }
+
+
+  // Modal related methods
 
 
   _infoModal() {
@@ -287,82 +315,6 @@ class gb {
   }
 
 
-  _artistModal(artist) {
-    const overlay = document.getElementById('modal-overlay');
-    // Open modal event
-    fetch(`assets/html/biomodal.html`).then(data => {
-      overlay.style.display = 'flex';
-      data.text().then(htmlString => {
-        const container = document.createRange().createContextualFragment(htmlString);
-        container.querySelector('#artist-name').innerHTML = artist.fullName;
-        container.querySelector('#artist-picture').src = `./assets/img/artists/${artist.picture}`;
-        for (let i = 0; i < artist.roles.length; ++i) {
-          container.querySelector('#artist-roles').innerHTML += this._nls.roles[artist.roles[i]];
-          if (i + 1 < artist.roles.length) {
-            container.querySelector('#artist-roles').innerHTML += ', ';
-          }
-        }
-        container.querySelector('#artist-roles').innerHTML += ` ${this._nls.since} ${artist.range.split('-')[0]}`;
-        container.querySelector('#artist-bio').innerHTML = artist.bio[this._lang];
-        container.querySelector('#close-modal-button').innerHTML = this._nls.close;
-        overlay.appendChild(container);
-        requestAnimationFrame(() => overlay.style.opacity = 1);
-      });
-    }).catch(e => console.error(e));
-  }
-
-
-  _pastMembersModal(pastMembers) {
-    const overlay = document.getElementById('modal-overlay');
-    // Open modal event
-    fetch(`assets/html/pastmembersmodal.html`).then(data => {
-      overlay.style.display = 'flex';
-      data.text().then(htmlString => {
-        const container = document.createRange().createContextualFragment(htmlString);
-        container.querySelector('#modal-title').innerHTML = this._nls.pastMembers;
-        const artistsContainer = container.querySelector('#past-members-container');
-        for (let i = 0; i < pastMembers.length; ++i) {
-          const member = document.createElement('DIV');
-          member.classList.add('past-member');
-          let roles = '';
-          for (let j = 0; j < pastMembers[i].roles.length; ++j) {
-            roles += this._nls.roles[pastMembers[i].roles[j]];
-            if (j + 1 < pastMembers[i].roles.length) {
-              roles += ', ';
-            }
-          }
-          roles += ` ${this._nls.from} ${pastMembers[i].range.split('-')[0]} ${this._nls.to} ${pastMembers[i].range.split('-')[1]}`;
-          member.innerHTML = `
-          <div><img src="./assets/img/artists/${pastMembers[i].picture}"><i>© ${pastMembers[i].pictureCredit}</i></div>
-          <div class="past-member-infos">
-            <span><h3>${pastMembers[i].fullName}</h3> – <i>${roles}</i></span>
-            <p>${pastMembers[i].bio[this._lang]}</p>
-          </div>
-          `;
-          artistsContainer.appendChild(member);
-        }
-        container.querySelector('#close-modal-button').innerHTML = this._nls.close;
-        overlay.appendChild(container);
-        // Force timeout to wait for draw, then raf to display scroll
-        setTimeout(() => {
-          const scroll = new window.ScrollBar({
-            target: overlay.querySelector('#past-members-container'),
-            style: {
-              color: this._band.styles.mainColor
-            }
-          });
-          // Force raf after scroll creation to make scrollbar properly visible
-          requestAnimationFrame(() => {
-            scroll.updateScrollbar();
-          });
-        }, 100);
-        // Open modal
-        requestAnimationFrame(() => overlay.style.opacity = 1);
-      });
-    }).catch(e => console.error(e));
-  }
-
-
   _closeModal(e) {
     if (e.originalTarget.id !== 'modal-overlay' && e.originalTarget.className !== 'close-modal') {
       return;
@@ -376,56 +328,6 @@ class gb {
         overlay.style = '';
       }, 400);
     }
-  }
-
-
-  _getReleaseLink(links) {
-    let url = '';
-    for (let i = 0; i < links.length; ++i) {
-      if (links[i].url !== '') {
-        url = links[i].url;
-
-        if (links[i].type === 'youtube') {
-          return links[i].url;
-        }
-      }
-    }
-
-    return url;
-  }
-
-
-  _openReleaseVideo(url) {
-    window.open(url, '_blank').focus();
-  }
-
-
-  // Utils for listen page
-
-
-  _buildReleaseDate(date) {
-    const dateArray = date.split('-');
-    if (this._lang === 'en') {
-      return `${this._nls.months[dateArray[1] - 1]} ${dateArray[0].replace(/^0+/, '')}, ${dateArray[2]}`;
-    } else {
-      return `${dateArray[0].replace(/^0+/, '')} ${this._nls.months[dateArray[1] - 1]} ${dateArray[2]}`;
-    }
-  }
-
-
-  _buildTrackCredits(tracks) {
-    let dom = '';
-    for (let i = 0; i < tracks.length; ++i) {
-      dom += `<h3>${i + 1}. ${tracks[i].title} – ${tracks[i].duration}</h3><p>`;
-      if (tracks[i].composer !== '') { // Add composer if any
-        dom += `<i>${this._nls.composer}</i> : ${tracks[i].composer}<br>`;
-      }
-      if (tracks[i].author !== '') { // Add author if any
-        dom += `<i>${this._nls.author}</i> : ${tracks[i].author}`;
-      }
-      dom += `</p>`;
-    }
-    return dom;
   }
 
 

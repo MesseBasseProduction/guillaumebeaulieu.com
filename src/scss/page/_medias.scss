@@ -1,0 +1,40 @@
+.medias-wrapper {
+  display: grid;
+  grid-gap: var(--spacing-large);
+  grid-template-columns: repeat(auto-fill, 60rem);
+  justify-content: center;
+  max-width: 66%;
+  width: 100%;
+
+  .media {
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    padding: var(--spacing);
+    text-align: center;
+
+    transition: all var(--transition);
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: rgba(255, 255, 255, .1);
+    }
+
+    iframe {
+      aspect-ratio: 16 / 9;
+      border-radius: .5rem;
+      box-shadow: 0 0 .5rem rgba(255, 255, 255, .1);
+      width: 100%;
+    }
+
+    h2 {
+      max-width: inherit;
+      padding: var(--spacing);
+      width: 100%;
+    }
+
+    h3 {
+      font-style: italic;
+    }
+  }
+}
