@@ -9,10 +9,9 @@
   --transition: .2s;
   --transition-long: .5s;
 
-  --mainColor: #5678d4;
+  --color-main: #5678d4;
   --gradientStart: #373f47;
   --gradientEnd: #708cca;
-  --imageFilter: invert(27%) sepia(28%) saturate(5861%) hue-rotate(138.3deg) brightness(120%) contrast(70%);
 }
 
 @keyframes rotate-plane {

@@ -14,8 +14,8 @@
 
   .modal {
     background: rgba(25, 25, 25, .95);
-    border-bottom: solid 5px var(--mainColor);
-    border-top: solid 5px var(--mainColor);
+    border-bottom: solid 5px var(--color-main);
+    border-top: solid 5px var(--color-main);
     border-radius: .5rem;
     box-shadow: 0 0 .5rem rgba(255, 255, 255, .3);
     padding: 3rem;
@@ -35,7 +35,7 @@
       &:active,
       &:focus,
       &:hover {
-        color: var(--mainColor);
+        color: var(--color-main);
       }
     }
 
@@ -102,7 +102,7 @@
           margin-left: var(--spacing-large);
 
           .release-info {
-            border-bottom: solid 1px var(--mainColor);
+            border-bottom: solid 1px var(--color-main);
             padding: var(--spacing-large) 0;
 
             h2 {
@@ -125,7 +125,7 @@
                 &:active,
                 &:focus,
                 &:hover {
-                  color: var(--mainColor)
+                  color: var(--color-main)
                 }
               }              
             }

@@ -122,9 +122,18 @@
     }
 
     &.modal-release {
-      .release-wrapper {        
+      .modal-content {
+        height: calc(100% - 9.8rem - var(--spacing)*2);        
+      }
+
+      .release-wrapper {
         grid-template-columns: 1fr;
         justify-items: center;
+        width: calc(100% - var(--default-scroll-size));
+
+        .release-cover {
+          width: 100%;
+        }
 
         .release-container {
           margin: 0;

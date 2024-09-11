@@ -128,6 +128,7 @@ class gb {
     document.querySelector('#nls-bio-content3').innerHTML = this._nls.biography.content3;
     document.querySelector('#nls-bio-content4').innerHTML = this._nls.biography.content4;
     document.querySelector('#nls-bio-content5').innerHTML = this._nls.biography.content5;
+    document.querySelector('#nls-bio-find-online').innerHTML = this._nls.biography.findOnline;
     // Handle image slideshow
     const spans = document.querySelector('#photo-select').children;
     for (let i = 0; i < spans.length; ++i) {

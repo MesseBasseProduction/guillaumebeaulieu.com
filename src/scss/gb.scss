@@ -30,7 +30,7 @@ body {
 
 a {
   display: block;
-  color: var(--mainColor);
+  color: var(--color-main);
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
 }
@@ -54,7 +54,7 @@ select {
 /* Page header with title, lang select and social links */
 header {
   align-items: center;
-  border-top: solid 5px var(--mainColor);
+  border-top: solid 5px var(--color-main);
   display: flex;
   justify-content: space-around;
   height: 20rem;
@@ -108,7 +108,7 @@ header {
 }
 /* Website navigation amongst pages */
 nav {
-  background-color: var(--mainColor);
+  background-color: var(--color-main);
   display: flex;
   justify-content: center;
   width: calc(100% - var(--default-scroll-size));
@@ -153,21 +153,20 @@ main {
       color: inherit;
       display: inline;
       font-size: inherit;
-      text-decoration: none;
 
       transition: all var(--transition);
 
       &:active,
       &:focus,
       &:hover {
-        color: var(--mainColor)
+        color: var(--color-main)
       }
     }
   }
 }
 /* Page footer */
 footer {
-  border-bottom: solid 5px var(--mainColor);
+  border-bottom: solid 5px var(--color-main);
   padding: var(--spacing-large) 0;
   text-align: center;
   width: calc(100% - var(--default-scroll-size));
@@ -197,7 +196,7 @@ footer {
     &:active,
     &:focus,
     &:hover {
-      color: var(--mainColor);
+      color: var(--color-main);
     }
   }
 }
@@ -216,7 +215,7 @@ footer {
 
   &::before {
     content: '';
-    background-color: var(--mainColor);
+    background-color: var(--color-main);
     border-radius: .5rem;
     height: var(--spacing-large);
     left: calc(50% - var(--spacing));
@@ -233,5 +232,6 @@ footer {
 @import 'page/medias';
 @import 'page/links';
 @import 'page/error404';
+
 @import 'utils/modal';
 @import 'utils/responsive';
