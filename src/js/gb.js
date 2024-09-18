@@ -317,7 +317,7 @@ class gb {
 
 
   _closeModal(e) {
-    if (e.originalTarget.id !== 'modal-overlay' && e.originalTarget.className !== 'close-modal') {
+    if (e.srcElement.id !== 'modal-overlay' && e.srcElement.className !== 'close-modal') {
       return;
     }
 
