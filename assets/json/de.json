@@ -1,6 +1,7 @@
 {
   "nav": {
     "biography": "Biographie",
+    "programs": "Programmes",
     "discography": "Diskographie",
     "medias": "Medien",
     "links": "Links",
@@ -8,17 +9,12 @@
   },
   "pages": {
     "biography": "biographie",
+    "programs": "programmes",
     "discography": "diskographie",
     "medias": "medien",
     "links": "links"
   },
   "biography": {
-    "short": "International bekannter Barockblockflötenspieler, bekannt für seine Virtuosität und authentische Interpretation von Werken des Repertoires.",
-    "content1": "<i>Guillaume Beaulieu</i> begann im Alter von zehn Jahren am Konservatorium Massy in der Region Paris Blockflöte zu spielen. Sein DEM in Blockflöte erlangte er 2010 in der Klasse von <i>Jean-Pierre Nicolas</i> am CRD des Chevreuse-Tals mit den einstimmigen Glückwünschen der Jury, dann wechselte er in die Klasse von <i>Pierre Hamon</i> am CNSMD in Lyon. Dort wird er 2015 seinen Masterabschluss mit Auszeichnung erlangen.",
-    "content2": "Seine Vorliebe für Alte Musik veranlasste ihn, sich für den Basso Continuo zu interessieren; So vervollständigte er seine Ausbildung mit einem Cembalostudium bei <i>Michèle Dévérité</i> am CRD im Chevreuse-Tal.",
-    "content3": "Diese Vielseitigkeit ermöglicht es ihm, in Frankreich und im Ausland (Brasilien, Japan, Polen, Holland, Belgien, Israel usw.) mit verschiedenen Ensembles aufzutreten: Pygmalion-Ensemble, Les Nouveaux Caractères, Canzona-Ensemble, Französisches Barock-Jugendorchester.",
-    "content4": "Mit seinem Flötenensemble hat er mehrere Preise gewonnen: das Consort Brouillamini (1. Preis des Internationalen Wettbewerbs der Tage der Alten Musik von Vanves 2016, Publikumspreis für die Musiksaison des <i>Musée en musique de Grenoble</i> 2015). Guillaume gewann außerdem als Solist den 2. Preis beim internationalen <i>Moeck / SRP-Soloblockflötenwettbewerb</i> 2017, den 3. Preis beim Nordhorn-Wettbewerb, den 3. Preis beim internationalen Wettbewerb New York im Jahr 2019 (<i>Golden Classical Music Awards</i>) sowie den 1. Preis beim Solistenwettbewerb Tel Aviv International im Jahr 2020.",
-    "content5": "Guillaume unterrichtet leidenschaftlich sein Instrument, spricht regelmäßig bei <i>Meisterkursen</i> und unterrichtet Blockflöte an der Marcoussis Arts School sowie am Chevilly-Larue-Konservatorium, dessen Direktor er auch ist.",
     "findOnline": "Finden Sie Guillaume Beaulieu im Internet <a href=\"/links\" alt=\"artist-links\">hier</a>."
   },
   "discography": {

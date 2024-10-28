@@ -1,0 +1,40 @@
+.programs-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 66%;
+  width: 100%;
+
+  .event {
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    display: grid;
+    grid-gap: var(--spacing-large);
+    grid-template-columns: 22rem 1fr;
+    margin: var(--spacing) 0;
+    padding: var(--spacing-large);
+    width: 100%;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: var(--spacing-large);
+      text-align: center;
+    }
+
+    p  {
+      text-align: justify;
+      text-indent: var(--spacing);
+    }
+  }
+}

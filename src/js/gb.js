@@ -18,7 +18,7 @@ class gb {
     this._nls = null;
     this._info = null;
     this._mainScroll = null;
-    this._version = '1.0.0';
+    this._version = '1.0.1';
     // Begin website initialization
     if (DEBUG === true) { console.log(`guillaumebeaulieu.com v${this._version} : Begin website initialization`); }
     this._initLang()
@@ -53,6 +53,8 @@ class gb {
           // Update nav and shared elements between pages
           document.querySelector('#nls-nav-biography').innerHTML = this._nls.nav.biography;
           document.querySelector('#nls-nav-biography').href = `/${this._nls.pages.biography}`;
+          document.querySelector('#nls-nav-programs').innerHTML = this._nls.nav.programs;
+          document.querySelector('#nls-nav-programs').href = `/${this._nls.pages.programs}`;
           document.querySelector('#nls-nav-discography').innerHTML = this._nls.nav.discography;
           document.querySelector('#nls-nav-discography').href = `/${this._nls.pages.discography}`;
           document.querySelector('#nls-nav-medias').innerHTML = this._nls.nav.medias;
@@ -104,6 +106,8 @@ class gb {
       document.querySelector('#info-modal').addEventListener('click', this._infoModal.bind(this));
       if (document.body.dataset.type === 'biography') {
         this._buildBiographyPage();
+      } else if (document.body.dataset.type === 'programs') {
+        this._buildProgramsPage();
       } else if (document.body.dataset.type === 'discography') {
         this._buildDiscographyPage();
       } else if (document.body.dataset.type === 'medias') {
@@ -122,12 +126,8 @@ class gb {
     if (DEBUG === true) { console.log(`5. Init website with the artist biography page`); }    
     // Update page title
     document.title = `Guillaume Beaulieu | ${this._nls.nav.biography}`;
-    document.querySelector('#nls-bio-short').innerHTML = this._nls.biography.short;
-    document.querySelector('#nls-bio-content1').innerHTML = this._nls.biography.content1;
-    document.querySelector('#nls-bio-content2').innerHTML = this._nls.biography.content2;
-    document.querySelector('#nls-bio-content3').innerHTML = this._nls.biography.content3;
-    document.querySelector('#nls-bio-content4').innerHTML = this._nls.biography.content4;
-    document.querySelector('#nls-bio-content5').innerHTML = this._nls.biography.content5;
+    document.querySelector('#nls-bio-short').innerHTML = this._info.bio.short[this._lang];
+    document.querySelector('#nls-bio-content1').innerHTML = this._info.bio.full[this._lang];
     document.querySelector('#nls-bio-find-online').innerHTML = this._nls.biography.findOnline;
     // Handle image slideshow
     const spans = document.querySelector('#photo-select').children;
@@ -140,6 +140,27 @@ class gb {
         document.querySelector('#artist-picture-path').src = `/assets/img/artists/${this._info.pictures.path[i]}`;
         document.querySelector('#artist-picture-author').textContent = this._info.pictures.author[i];
       });
+    }
+  }
+
+
+  _buildProgramsPage() {
+    if (DEBUG === true) { console.log(`5. Init website with the artist programs page`); }    
+    // Update page title
+    document.title = `Guillaume Beaulieu | ${this._nls.nav.programs}`;
+    // Build artist programs
+    for (let i = 0; i < this._info.programs.length; ++i) {
+      const container = document.createElement('DIV');
+      container.classList.add('event');
+      container.innerHTML = `
+        <img src="/assets/img/programs/${this._info.programs[i].image}" alt="program-image">
+        <div>
+          <h3>${this._info.programs[i].title[this._lang]}</h3>
+          <p>${this._info.programs[i].description[this._lang]}</p>
+        </div>
+      `;
+      document.querySelector('#programs-wrapper').appendChild(container);
+      //container.addEventListener('click', this._releaseModal.bind(this, i));
     }
   }
 

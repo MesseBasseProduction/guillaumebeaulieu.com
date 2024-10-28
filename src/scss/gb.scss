@@ -45,6 +45,7 @@ button {
 }
 
 select {
+  cursor: pointer;
   padding: .2rem 1rem;
   position: absolute;
   right: 2rem;
@@ -228,6 +229,7 @@ footer {
 }
 
 @import 'page/biography';
+@import 'page/programs';
 @import 'page/discography';
 @import 'page/medias';
 @import 'page/links';

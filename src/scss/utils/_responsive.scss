@@ -16,6 +16,14 @@
     }
   }
 
+  body.programs {
+    main {
+      .programs-wrapper {
+        max-width: 85%;
+      }
+    } 
+  }
+
   body.medias {
     main {
       .medias-wrapper {
@@ -177,6 +185,18 @@
         }
       }
     }
+  }
+
+  body.programs {
+    main {
+      .programs-wrapper {
+        max-width: 90%;
+
+        .event {
+          grid-template-columns: 1fr;
+        }
+      }
+    } 
   }
 
   body.discography {

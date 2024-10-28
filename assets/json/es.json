@@ -1,6 +1,7 @@
 {
   "nav": {
     "biography": "Biografía",
+    "programs": "Programas",
     "discography": "Discografía",
     "medias": "Medios",
     "links": "Enlaces",
@@ -8,17 +9,12 @@
   },
   "pages": {
     "biography": "biografia",
+    "programs": "programas",
     "discography": "discografia",
     "medias": "medios",
     "links": "enlaces"
   },
   "biography": {
-    "short": "Flautista barroco de renombre internacional, reconocido por su virtuosismo e interpretación auténtica de obras del repertorio.",
-    "content1": "<i>Guillaume Beaulieu</i> comenzó a tocar la flauta dulce a los diez años en el conservatorio de Massy, en la región de París. Obtuvo su DEM en flauta dulce en 2010 en la promoción de <i>Jean-Pierre Nicolas</i> en el CRD del valle de Chevreuse con las felicitaciones unánimes del jurado, luego se unió a la promoción de <i >Pierre Hamon< /i> en el CNSMD de Lyon. Allí obtendrá su maestría en 2015 con honores.",
-    "content2": "Su gusto por la música antigua le llevó a interesarse por el bajo continuo; Así completó su formación estudiando clave con <i>Michèle Dévérité</i> en el CRD del valle de Chevreuse.",
-    "content3": "Esta versatilidad le permite actuar en Francia y en el extranjero (Brasil, Japón, Polonia, Holanda, Bélgica, Israel, etc.) con diferentes conjuntos: conjunto Pygmalion, Les Nouveaux Caractères, conjunto Canzona, Orquesta Juvenil Barroca Francesa.",
-    "content4": "Ha ganado varios premios con su conjunto de flautas: el Consort Brouillamini (1<sup>er</sup> premio del Concurso Internacional de las Jornadas de Música Antigua de Vanves 2016, Premio del Público de la temporada musical del <i>Musée en musique de Grenoble</i> 2015). Guillaume también ganó como solista el 2<sup>do</sup> premio en el concurso internacional de flauta dulce solista Moeck / SRP 2017, el 3<sup>er</sup> premio en el concurso Nordhorn, el 3<sup>er</sup> premio en el concurso internacional de Nueva York en 2019 (<i>Golden Classical Music Awards</i>), así como el 1<sup>er</sup> premio en el concurso de solistas Tel Aviv International en 2020.",
-    "content5": "Apasionado por la enseñanza de su instrumento, Guillaume habla regularmente en <i>masterclass</i> y enseña flauta dulce en la escuela de artes Marcoussis, así como en el conservatorio Chevilly-Larue, del que también es director.",
     "findOnline": "Encuentre a Guillaume Beaulieu en Internet <a href=\"/links\" alt=\"artist-links\">aquí</a>."
   },
   "discography": {
