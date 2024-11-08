@@ -18,7 +18,7 @@ class gb {
     this._nls = null;
     this._info = null;
     this._mainScroll = null;
-    this._version = '1.0.1';
+    this._version = '1.0.2';
     // Begin website initialization
     if (DEBUG === true) { console.log(`guillaumebeaulieu.com v${this._version} : Begin website initialization`); }
     this._initLang()
@@ -160,7 +160,12 @@ class gb {
         </div>
       `;
       document.querySelector('#programs-wrapper').appendChild(container);
-      //container.addEventListener('click', this._releaseModal.bind(this, i));
+      container.addEventListener('click', () => {
+        const link = document.createElement('A');
+        link.href = `/assets/doc/${this._info.programs[i].path}`;
+        link.download = `${this._info.programs[i].path}`;
+        link.dispatchEvent(new MouseEvent('click'));
+      });
     }
   }
 
@@ -207,6 +212,7 @@ class gb {
         <h3>${date}</h3>
       `;
       document.querySelector('#medias-wrapper').appendChild(container);
+      container.addEventListener('click', this._watchMediaModal.bind(this, i));
     }
   }
 
@@ -330,6 +336,22 @@ class gb {
           }
         });
 
+        overlay.appendChild(container);
+        setTimeout(() => overlay.style.opacity = 1, 50);
+      });
+    }).catch(e => console.error(e));
+  }
+
+
+  _watchMediaModal(index) {
+    const overlay = document.getElementById('modal-overlay');
+    // Open modal event
+    fetch(`assets/html/modal/watchmediamodal.html`).then(data => {
+      overlay.style.display = 'flex';
+      data.text().then(htmlString => {
+        const container = document.createRange().createContextualFragment(htmlString);
+        container.querySelector('#iframe-object').src = this._info.medias[index].url;
+        container.querySelector('#iframe-object').title = this._info.medias[index].title;
         overlay.appendChild(container);
         setTimeout(() => overlay.style.opacity = 1, 50);
       });

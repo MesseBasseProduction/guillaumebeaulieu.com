@@ -1,7 +1,7 @@
 .links-wrapper {
   display: grid;
   grid-gap: var(--spacing);
-  grid-template-columns: repeat(auto-fill, 25rem);
+  grid-template-columns: repeat(auto-fill, 18rem);
   justify-content: center;
   max-width: 66%;
   width: 100%;
@@ -18,6 +18,7 @@
     height: 100%;
     justify-content: center;
     padding: var(--spacing);
+    text-align: center;
     text-decoration: none;
     width: 100%;
 
@@ -32,11 +33,11 @@
 
     img {
       margin-bottom: var(--spacing);
-      width: 8rem;
+      width: 6rem;
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
   }
 }

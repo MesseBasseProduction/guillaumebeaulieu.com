@@ -22,6 +22,7 @@
   "programs": [
     {
       "image": "telemann.webp",
+      "path": "Dossier de présentation - Fantaisies de Telemann.pdf",
       "title": {
         "fr": "Concert/Conférence autour des Fantaisies pour flûte seule sans basse de <i>Georg Philipp Telemann</i>",
         "en": "Concert/Conférence around Fantaisias for solo recorder with no bass from <i>Georg Philipp Telemann</i>",
@@ -38,6 +39,7 @@
       }
     }, {
       "image": "italie.webp",
+      "path": "Dossier de présentation - Œuvres Italiennes.pdf",
       "title": {
         "fr": "Concert: œuvres italiennes au XVIII<sup>ème</sup> siècle",
         "en": "Concert: italian works in the 18<sup>th</sup> century",
@@ -54,6 +56,7 @@
       }
     }, {
       "image": "corelli.webp",
+      "path": "Dossier de présentation - Œuvres de Corelli.pdf",
       "title": {
         "fr": "Concert: œuvres de <i>Arcangelo Corelli</i>, Sonata da Camera Op.5, n°7 à n°12",
         "en": "Concert: <i>Arcangelo Corelli</i>'s work, Sonata da Camera Op.5, n°7 to n°12",
@@ -210,13 +213,29 @@
   ],
   "medias": [
     {
-      "title": "Guillaume Beaulieu, Julien Faure – Concert: Œuvres Itraliennes au XVIII<sup>ème</sup>",
+      "title": "Guillaume Beaulieu – Teaser: Fantaisies pour flûte seule sans basse de Telemann",
+      "url": "https://tube.mycozy.space/videos/embed/ee42f997-9be1-4c27-9a96-7d12273a57bc",
+      "date": "2024-10-05"
+    }, {
+      "title": "Guillaume Beaulieu, Julien Faure – Telemann: Duo pour deux Flûtes à Bec",
+      "url": "https://tube.mycozy.space/videos/embed/33dc6b9b-c43b-422f-94e1-cfa8a30f52a6",
+      "date": "2024-06-14"
+    }, {
+      "title": "Guillaume Beaulieu, Julien Faure – Concert: Œuvres Italiennes au XVIII<sup>ème</sup>",
       "url": "https://tube.mycozy.space/videos/embed/ae877fc6-28b5-46b7-98a2-7f6370bc1bc2",
       "date": "2024-01-14"
     }, {
       "title": "Guillaume Beaulieu, Julien Faure – Concert: Œuvres de Corelli",
       "url": "https://tube.mycozy.space/videos/embed/9e93a17d-dece-454f-8c59-147a2cc8a8d3",
       "date": "2023-01-07"
+    }, {
+      "title": "Guillaume Beaulieu, Barrocade Ensemble – Telemann: Ouverture–Suite in A minor, TWV 55:a2",
+      "url": "https://tube.mycozy.space/videos/embed/cc20f92d-9086-48c4-a169-94f5b75764c1",
+      "date": "2022-03-29"
+    }, {
+      "title": "Guillaume Beaulieu, Barrocade Ensemble – Vivaldi: Concerto en Do mineur, RV441 (TARF 2020, Finale Catégorie 4)",
+      "url": "https://tube.mycozy.space/videos/embed/0ba71410-c0bd-453f-8337-7be06ba06e5f",
+      "date": "2020-02-06"
     }
   ],
   "links": [
