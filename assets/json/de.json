@@ -26,7 +26,7 @@
   },
   "medias": {
     "description": "Audiovisuelle Produktionen, in denen Guillaume Beaulieu auftritt.",
-    "link": "Die Ensembleproduktionen, an denen Guillaume Beaulieu mitwirkt, können Sie auch auf seinem <a href=\"https://youtube.com/@GuillaumeBeaulieuRecorder/\" target=\"_blank\" rel=\"noreferrer noopener\" >YouTube entdecken Kanal</a>."
+    "link": "Die Ensembleproduktionen, an denen Guillaume Beaulieu mitwirkt, können Sie auch auf seinem <a href=\"https://youtube.com/@GuillaumeBeaulieuRecorder/\" target=\"_blank\" rel=\"noreferrer noopener\">YouTube entdecken Kanal</a>."
   },
   "links": {
     "description": "Finden Sie Guillaume Beaulieu in sozialen Netzwerken und Online-Plattformen.",
@@ -54,7 +54,7 @@
   "modal": {
     "info": {
       "title": "Über diese Website",
-      "content1": "Diese Website wird in Frankreich von der Association loi 1901 Messe Basse Production (Nummer RNA W911005952, Sermaise – Frankreich) veröffentlicht und gehostet. Der Quellcode dieser Website ist in diesem Repository <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\">GitHub</a> zugänglich und wird verteilt unter der kostenlosen GPL-3.0-Lizenz.",
+      "content1": "Diese Website wird in Frankreich von der Association loi 1901 Messe Basse Production (Nummer RNA W911005952, Sermaise – Frankreich) veröffentlicht und gehostet. Der Quellcode dieser Website ist in diesem Repository <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a> zugänglich und wird verteilt unter der kostenlosen GPL-3.0-Lizenz.",
       "content2": "Der auf dieser Website vorhandene fotografische, textliche und audiovisuelle Inhalt ist geschützt; Jede Weiterverwendung außerhalb dieses Zusammenhangs bedarf der vorherigen Genehmigung von <a href=\"mailto:contact@messe-basse-produktion.com\" alt=\"mail-contact\">contact@messe-basse-produktion.com </a> und bei jeder Wiederverwendung von Inhalten muss der Autor des Inhalts erwähnt werden.",
       "content3": "Um die Zielgruppe dieser Website zu messen und in Übereinstimmung mit den Empfehlungen der CNIL in Bezug auf die DSGVO verwendet diese Website ein Analysetool, <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\">Matomo</a>, das die Privatsphäre seiner Benutzer respektiert. Die zur Messung der Zielgruppe eingesetzten Cookies bedürfen keiner Einwilligung. Die Messe Basse Production garantiert, dass keine personenbezogenen Daten erhoben werden und keine Daten für kommerzielle Zwecke verwendet werden."
     },
@@ -71,6 +71,7 @@
     "fr": "🇫🇷 Französisch",
     "es": "🇪🇸 Spanisch",
     "pt": "🇵🇹 Portugiesisch",
-    "de": "🇩🇪 Deutsch"
+    "de": "🇩🇪 Deutsch",
+    "ja": "🇯🇵 Japanisch"
   }
 }

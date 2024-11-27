@@ -2,6 +2,7 @@ import '../scss/gb.scss';
 
 
 const DEBUG = false;
+const SUPPORTED_LANGUAGES = ['de', 'en', 'es', 'fr', 'ja', 'pt'];
 
 
 class gb {
@@ -11,14 +12,14 @@ class gb {
     // Determine language from local storage or from navigator language
     this._lang = localStorage.getItem('website-lang');
     if (this._lang === null) {
-      this._lang = (['de', 'en', 'es', 'fr', 'pt'].indexOf(navigator.language.substring(0, 2)) !== -1) ? navigator.language.substring(0, 2) : 'en';
+      this._lang = (SUPPORTED_LANGUAGES.indexOf(navigator.language.substring(0, 2)) !== -1) ? navigator.language.substring(0, 2) : 'en';
       localStorage.setItem('website-lang', this._lang);
     }
     // Class internals for lang, translations and artist info
     this._nls = null;
     this._info = null;
     this._mainScroll = null;
-    this._version = '1.0.2';
+    this._version = '1.0.3';
     // Begin website initialization
     if (DEBUG === true) { console.log(`guillaumebeaulieu.com v${this._version} : Begin website initialization`); }
     this._initLang()

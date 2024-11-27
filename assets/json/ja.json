@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "biography": "バイオグラフィー",
+    "programs": "プログラム",
+    "discography": "ディスコグラフィー",
+    "medias": "メディア",
+    "links": "リンク",
+    "error404": "ページが存在しません"
+  },
+  "pages": {
+    "biography": "biography",
+    "programs": "programs",
+    "discography": "discography",
+    "medias": "medias",
+    "links": "links"
+  },
+  "biography": {
+    "findOnline": "インターネットでギョーム・ボーリューを検索するには<a href=\"/links\" alt=\"artist-links\">ここ</a>をクリックしてください"
+  },
+  "programs": {
+    "description": "ギョームが提供するコンサートとマスタークラスのプログラム。",
+    "contact": "詳細については、電子メール <a href=\"mailto:contact@messe-basse-production.com\" alt=\"program-contact-link\">contact@messe-basse-production.com</a> までお問い合わせください。"
+  },
+  "discography": {
+    "description": "ソロでもアンサンブルでも、ギョーム・ボーリューの解釈をフィーチャーした作品。ディスクをクリックすると、情報と関連リンクが表示されます。"
+  },
+  "medias": {
+    "description": "ギョーム・ボーリューが出演するオーディオビジュアル作品。",
+    "link": "ギヨーム ボーリューが参加しているアンサンブル作品は、彼の <a href=\"https://youtube.com/@GuillaumeBeaulieuRecorder/\" target=\"_blank\" rel=\"noreferrer noopener\">YouTube</a> チャンネルでもご覧いただけます。"
+  },
+  "links": {
+    "description": "ソーシャルネットワークやオンラインプラットフォームでギヨーム・ボーリューを見つけてください。",
+    "contact": "お気軽に <a href=\"mailto:contact@messe-basse-production.com\" alt=\"program-contact-link\">contact@messe-basse-production.com</a> までメールにてご連絡ください。",
+    "7digital": "7Digital",
+    "amazon": "Amazon Music",
+    "apple": "Apple Music",
+    "bandcamp": "Bandcamp",
+    "deezer": "Deezer",
+    "discogs": "Discogs",
+    "facebook": "Facebook",
+    "fnac": "Fnac",
+    "instagram": "Instagram",
+    "musicbrainz": "MusicBrainz",
+    "qobuz": "Qobuz",
+    "soundcloud": "Soundcloud",
+    "spotify": "Spotify",
+    "tidal": "Tidal",
+    "youtube": "YouTube"
+  },
+  "page404": {
+    "title": "エラー404",
+    "description": "閲覧しようとしているページは存在しません。特定のページに移動するには、ナビゲーション バーを使用してください。"
+  },
+  "modal": {
+    "info": {
+      "title": "について",
+      "content1": "このサイトは、Loi 1901 Messe Basse Production 協会 (番号 RNA W911005952、セルメーズ – フランス) によってフランスで公開およびホストされています。このサイトのソース コードは、この <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a> リポジトリからアクセスでき、無料の GPL-3.0 ライセンスに基づいて配布されています。",
+      "content2": "このサイトにある写真、テキスト、オーディオビジュアルのコンテンツは保護されています。このコンテキスト外で再利用する場合は、<a href=\"mailto:contact@messe-basse-production.com\" alt=\"mail-contact-link\">contact@messe-basse-production.com</a> から事前に許可を得る必要があり、コンテンツを再利用する場合は、そのコンテンツの作成者の言及を伴う必要があります。",
+      "content3": "このサイトの使用状況を測定するために、GDPR に関する CNIL の推奨に従って、このサイトはユーザーのプライバシーを尊重する <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\">Matomo</a> 分析ツールを使用します。視聴者数測定の目的で使用される Cookie には同意は必要ありません。 Messe Basse Production は、個人データが収集されないこと、および商業目的での使用を目的としたデータが収集されないことを保証します。"
+    },
+    "release": {
+      "discFrom": "ディスク",
+      "publishedOn": "年に発行",
+      "publishedBy": "発行の",
+      "tracks": "トラック"
+    }
+  },
+  "close": "近い",
+  "lang": {
+    "en": "🇬🇧 英語",
+    "fr": "🇫🇷 フランス語",
+    "es": "🇪🇸 スペイン語",
+    "pt": "🇵🇹 ポルトガル語",
+    "de": "🇩🇪 ドイツ語",
+    "ja": "🇯🇵 日本語"
+  }
+}

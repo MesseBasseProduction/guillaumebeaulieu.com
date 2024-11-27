@@ -54,7 +54,7 @@
   "modal": {
     "info": {
       "title": "Sobre este site",
-      "content1": "Este site é publicado e alojado em França pela Association loi 1901 Messe Basse Production (Número RNA W911005952, Sermaise – França). O código fonte deste site está acessível neste repositório <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\">GitHub</a> e é distribuído sob a licença gratuita GPL-3.0.",
+      "content1": "Este site é publicado e alojado em França pela Association loi 1901 Messe Basse Production (Número RNA W911005952, Sermaise – França). O código fonte deste site está acessível neste repositório <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a> e é distribuído sob a licença gratuita GPL-3.0.",
       "content2": "O conteúdo fotográfico, textual e audiovisual presente neste site está protegido; qualquer reutilização fora deste contexto requer a obtenção de autorização prévia de <a href=\"mailto:contact@messe-basse-production.com\" alt=\"mail-contact\">contact@messe-basse-production.com</a> e cada reutilização de conteúdo deve ser acompanhada de uma menção ao autor do referido conteúdo.",
       "content3": "Para medir a audiência deste site e de acordo com as recomendações da CNIL relativamente ao RGPD, este site utiliza uma ferramenta de análise, <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\">Matomo</a> que respeita a privacidade dos seus utilizadores. Os cookies utilizados para medir a audiência não requerem consentimento. A Messe Basse Production garante que nenhum dado pessoal é recolhido e que nenhum dado se destina a ser utilizado para fins comerciais."
     },
@@ -71,6 +71,7 @@
     "fr": "🇫🇷 Francês",
     "es": "🇪🇸 Espanhol",
     "pt": "🇵🇹 Português",
-    "de": "🇩🇪 Alemão"
+    "de": "🇩🇪 Alemão",
+    "ja": "🇯🇵 Japonês"
   }
 }
