@@ -17,6 +17,10 @@
   "biography": {
     "findOnline": "Finden Sie Guillaume Beaulieu im Internet <a href=\"/links\" alt=\"artist-links\">hier</a>."
   },
+  "programs": {
+    "description": "Konzert und Meisterkursprogramme von Guillaume.",
+    "contact": "Für weitere Informationen können Sie sich per E-Mail an <a href=\"mailto:contact@messe-basse-produktion.com\" alt=\"program-contact-link\">contact@messe-basse-produktion.com</a> wenden."
+  },
   "discography": {
     "description": "Produktionen mit Interpretationen von Guillaume Beaulieu, ob Solo oder im Ensemble. Klicken Sie auf eine Diskette, um die Informationen und zugehörigen Links anzuzeigen."
   },
@@ -25,8 +29,8 @@
     "link": "Die Ensembleproduktionen, an denen Guillaume Beaulieu mitwirkt, können Sie auch auf seinem <a href=\"https://youtube.com/@GuillaumeBeaulieuRecorder/\" target=\"_blank\" rel=\"noreferrer noopener\" >YouTube entdecken Kanal</a>."
   },
   "links": {
-    "linksDescription": "Finden Sie Guillaume Beaulieu in sozialen Netzwerken und Online-Plattformen.",
-    "linksContact": "Zögern Sie nicht, uns per E-Mail unter <a href=\"mailto:contact@messe-basse-produktion.com\">contact@messe-basse-produktion.com</a> zu kontaktieren.",
+    "description": "Finden Sie Guillaume Beaulieu in sozialen Netzwerken und Online-Plattformen.",
+    "contact": "Zögern Sie nicht, uns per E-Mail unter <a href=\"mailto:contact@messe-basse-produktion.com\">contact@messe-basse-produktion.com</a> zu kontaktieren.",
     "7digital": "7Digital",
     "amazon": "Amazon Music",
     "apple": "Apple Music",

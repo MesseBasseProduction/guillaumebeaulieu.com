@@ -148,6 +148,8 @@ class gb {
     if (DEBUG === true) { console.log(`5. Init website with the artist programs page`); }    
     // Update page title
     document.title = `Guillaume Beaulieu | ${this._nls.nav.programs}`;
+    document.querySelector('#nls-programs-description').innerHTML = this._nls.programs.description;
+    document.querySelector('#nls-programs-contact').innerHTML = this._nls.programs.contact;
     // Build artist programs
     for (let i = 0; i < this._info.programs.length; ++i) {
       const container = document.createElement('DIV');
@@ -221,8 +223,8 @@ class gb {
     if (DEBUG === true) { console.log(`5. Init website with the artist links page`); }
     // Update page title
     document.title = `Guillaume Beaulieu | ${this._nls.nav.links}`;
-    document.querySelector('#nls-links-description').innerHTML = this._nls.links.linksDescription;
-    document.querySelector('#nls-links-contact').innerHTML = this._nls.links.linksContact;
+    document.querySelector('#nls-links-description').innerHTML = this._nls.links.description;
+    document.querySelector('#nls-links-contact').innerHTML = this._nls.links.contact;
     // Build artist links
     for (let i = 0; i < this._info.links.length; ++i) {
       const container = document.createElement('A');
