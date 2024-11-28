@@ -13,6 +13,7 @@
     img {
       border-radius: .5rem;
       box-shadow: 0 0 .5rem rgba(255, 255, 255, .3);
+      height: auto;
       width: 100%;
 
       transition: all var(--transition);
@@ -37,12 +38,18 @@
       margin-top: var(--spacing);
       user-select: none;
 
-      span {
+      a {
         background-color: rgba(255, 255, 255, .5);
         border-radius: 50%;
+        color: transparent;
         cursor: pointer;
+        height: 1.4rem;
         margin: 0 var(--spacing-tiny);
+        overflow: hidden;
+        text-decoration: none;
         width: 1.4rem;
+
+        transition: all .5s;
 
         &.active {
           background-color: white;

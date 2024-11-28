@@ -89,7 +89,7 @@
         grid-template-columns: 2fr 3fr;
         height: 80%;
         padding: var(--spacing-tiny) 0;
-        width: calc(100% - var(--default-scroll-size));
+        width: 100%;
 
         .release-cover {
           border-radius: .5rem;

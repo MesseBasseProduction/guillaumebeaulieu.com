@@ -1,5 +1,6 @@
 {
   "nav": {
+    "lang": "言語",
     "biography": "バイオグラフィー",
     "programs": "プログラム",
     "discography": "ディスコグラフィー",
@@ -15,7 +16,7 @@
     "links": "links"
   },
   "biography": {
-    "findOnline": "インターネットでギョーム・ボーリューを検索するには<a href=\"/links\" alt=\"artist-links\">ここ</a>をクリックしてください"
+    "findOnline": "<a href=\"/links\" alt=\"artist-links\">インターネット</a>でギョーム ボーリューを検索"
   },
   "programs": {
     "description": "ギョームが提供するコンサートとマスタークラスのプログラム。",
@@ -56,7 +57,7 @@
       "title": "について",
       "content1": "このサイトは、Loi 1901 Messe Basse Production 協会 (番号 RNA W911005952、セルメーズ – フランス) によってフランスで公開およびホストされています。このサイトのソース コードは、この <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a> リポジトリからアクセスでき、無料の GPL-3.0 ライセンスに基づいて配布されています。",
       "content2": "このサイトにある写真、テキスト、オーディオビジュアルのコンテンツは保護されています。このコンテキスト外で再利用する場合は、<a href=\"mailto:contact@messe-basse-production.com\" alt=\"mail-contact-link\">contact@messe-basse-production.com</a> から事前に許可を得る必要があり、コンテンツを再利用する場合は、そのコンテンツの作成者の言及を伴う必要があります。",
-      "content3": "このサイトの使用状況を測定するために、GDPR に関する CNIL の推奨に従って、このサイトはユーザーのプライバシーを尊重する <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\">Matomo</a> 分析ツールを使用します。視聴者数測定の目的で使用される Cookie には同意は必要ありません。 Messe Basse Production は、個人データが収集されないこと、および商業目的での使用を目的としたデータが収集されないことを保証します。"
+      "content3": "このサイトの使用状況を測定するために、GDPR に関する CNIL の推奨に従って、このサイトはユーザーのプライバシーを尊重する <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\" target=\"_blank\" rel=\"noreferrer noopener\">Matomo</a> 分析ツールを使用します。視聴者数測定の目的で使用される Cookie には同意は必要ありません。 Messe Basse Production は、個人データが収集されないこと、および商業目的での使用を目的としたデータが収集されないことを保証します。"
     },
     "release": {
       "discFrom": "ディスク",

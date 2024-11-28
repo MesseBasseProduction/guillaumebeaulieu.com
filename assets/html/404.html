@@ -8,7 +8,6 @@
   <meta content="initial-scale=1" name="viewport"/>
   <meta name="description" content="Guillaume Beaulieu est un Flûtiste à Bec baroque de renommée internationale, reconnu pour sa virtuosité et son interprétation authentique des œuvres du répertoire.">
   <link rel="canonical" href="https://guillaumebeaulieu.com/"/>
-  <link rel="stylesheet" href="/assets/lib/ScrollBar.bundle.css"/>
   <link rel="stylesheet" href="/assets/dist/gb.bundle.css"/>
   <!-- Favicon zone -->
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
@@ -47,7 +46,7 @@
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
-      var u="//matomo.mycozy.space/";
+      var u="https://matomo.mycozy.space/";
       _paq.push(['setTrackerUrl', u+'matomo.php']);
       _paq.push(['setSiteId', '41']);
       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -60,6 +59,7 @@
 <header>
   <h1 class="artist-name"><a href="/">Guillaume Beaulieu</a></h1>
   <div class="interaction-wrapper">
+    <label for="lang-select" id="nls-header-select-label">Langue</label>
     <select id="lang-select">
       <option value="en">🇬🇧 Anglais</option>
       <option value="fr">🇫🇷 Français</option>
@@ -70,19 +70,20 @@
     </select>
     <div class="social-shortcuts">
       <a href="https://www.instagram.com/guillaume_beaulieu_recorder/" target="_blank" rel="noopener" alt="instagram-profile">
-        <img src="/assets/img/logo/instagram.svg" alt="Instagram logo">
+        <img src="/assets/img/logo/instagram.svg" alt="Instagram logo" height="40" width="40">
       </a>
       <a href="https://www.youtube.com/@GuillaumeBeaulieuRecorder" target="_blank" rel="noopener" alt="youtube-account">
-        <img src="/assets/img/logo/youtube.svg" alt="YouTube logo">
+        <img src="/assets/img/logo/youtube.svg" alt="YouTube logo" height="40" width="40">
       </a>
       <a href="https://www.facebook.com/guillaume.beaulieu.73" target="_blank" rel="noopener" alt="facebook-profile">
-        <img src="/assets/img/logo/facebook.svg" alt="Facebook logo">
+        <img src="/assets/img/logo/facebook.svg" alt="Facebook logo" height="40" width="40">
       </a>
     </div>
   </div>
 </header>
 <nav>
   <a href="/biography" id="nls-nav-biography" alt="artist-biography">Biographie</a>
+  <a href="/programs" id="nls-nav-programs" alt="artist-programs">Programmes</a>
   <a href="/discography" id="nls-nav-discography" alt="artist-discography">Discographie</a>
   <a href="/medias" id="nls-nav-medias" alt="artist-medias">Médias</a>
   <a href="/links" id="nls-nav-links" alt="artist-links">Liens</a>
@@ -91,20 +92,17 @@
   <h1 id="nls-404-title">Erreur 404</h1>
   <h2 id="nls-404-description">La page que vous cherchez à visionner n'existe pas. Veuillez utiliser la barre de navigation pour vous rendre sur une page définie.</h2>
   <a href="/biography" id="nls-nav-biography" alt="artist-biography">
-    <img src="/assets/img/artists/gb2.webp" alt="artist-picture">
+    <img src="/assets/img/artists/gb2.webp" alt="artist-picture" height="425" width="756">
   </a>
 </main>
 <footer>
   <a href="https://messe-basse-production.com" target="_blank" rel="noreferrer noopener">
-    <img src="/assets/img/logo/mbp-text-white.png">
+    <img src="/assets/img/logo/mbp-text-white.webp" alt="messe-basse-production-logo" height="42" width="300">
   </a>
-  <span id="info-modal">
-    <p>© 2024</p>
-  </span>
+  <a href="#" id="info-modal" class="info-modal">© 2024</a>
 </footer>
 <div id="loading-overlay" class="loading-overlay"></div>
 <div id="modal-overlay" class="modal-overlay"></div>
-<script type="text/javascript" src="/assets/lib/ScrollBar.bundle.js"></script>
 <script type="text/javascript" src="/assets/dist/gb.bundle.js"></script>
 <script type="text/javascript">window.gb = new gb();</script>
 </body>

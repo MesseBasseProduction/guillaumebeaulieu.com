@@ -1,5 +1,6 @@
 {
   "nav": {
+    "lang": "Language",
     "biography": "Biography",
     "programs": "Programs",
     "discography": "Discography",
@@ -15,7 +16,7 @@
     "links": "links"
   },
   "biography": {
-    "findOnline": "Find Guillaume Beaulieu on the internet <a href=\"/links\" alt=\"artist-links\">here</a>."
+    "findOnline": "Find Guillaume Beaulieu <a href=\"/links\" alt=\"artist-links\">on the internet</a>."
   },
   "programs": {
     "description": "Concert and masterclass programs proposed by Guillaume.",
@@ -56,7 +57,7 @@
       "title": "About",
       "content1": "This website is published and hosted in France by the law 1901 organization Messe Basse Production (RNA number W911005952, Sermaise – France). The source code of this website is accessible on this repository <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a> and is distributed under the open source license GPL-3.0.",
       "content2": "The photographic, textual and audio-visual contents present on this website are protected; any reuse outside of this context requires prior authorization to be obtained from <a href=\"mailto:contact@messe-basse-production.com\" alt=\"mail-contact\">contact@messe-basse-production.com</a> and each reuse of content must be accompanied by a mention of the author of said content.",
-      "content3": "In order to measure the audience of this website and in accordance with the recommendations of the CNIL regarding GDPR, this site uses an analytics tool, <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\">Matomo</a> which respects the privacy of its users. The cookies used to measure the audience do not require consent. Messe Basse Production guarantees that no personal data is collected and that no data has the right to be used for commercial purposes."
+      "content3": "In order to measure the audience of this website and in accordance with the recommendations of the CNIL regarding GDPR, this site uses an analytics tool, <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\" target=\"_blank\" rel=\"noreferrer noopener\">Matomo</a> which respects the privacy of its users. The cookies used to measure the audience do not require consent. Messe Basse Production guarantees that no personal data is collected and that no data has the right to be used for commercial purposes."
     },
     "release": {
       "discFrom": "A disc of",

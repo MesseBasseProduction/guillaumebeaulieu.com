@@ -3,7 +3,7 @@ const path = require('path');
 const compression = require('compression');
 const zlib = require('node:zlib');
 // App and preferences
-const version = '1.0.3';
+const version = '1.1.0';
 const port = 8040;
 const app = express();
 // Log server start
@@ -38,7 +38,7 @@ const links = (req, res) => {
 
 // URL definitions
 app.use('/assets', express.static(path.join(__dirname, '../../assets'), { // Serve static files
-  maxAge: '864000000' // 10 days caching for app assets
+  maxAge: '31536000000' // 1 years caching for app assets
 }));
 
 // Page urls
@@ -47,7 +47,7 @@ for (let i = 0; i < biographyPage.length; ++i) {
   app.get(biographyPage[i], biography);
 }
 
-const programsPage = ['/programs', '/programmes', '/programas'];
+const programsPage = ['/programs', '/programmes', '/programme', '/programas'];
 for (let i = 0; i < programsPage.length; ++i) {
   app.get(programsPage[i], programs);
 }
@@ -66,6 +66,12 @@ const linksPage = ['/links', '/liens', '/enlaces', '/ligacoes'];
 for (let i = 0; i < linksPage.length; ++i) {
   app.get(linksPage[i], links);
 }
+
+app.get('/robots.txt', (req, res) => {
+  console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | 200 ${req.originalUrl} page requested, return robots.txt`);
+  res.sendFile(path.join(__dirname, '../../robots.txt'));
+});
+
 // 404
 app.use((req, res) => {
   console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | 404 ${req.originalUrl} page requested`);

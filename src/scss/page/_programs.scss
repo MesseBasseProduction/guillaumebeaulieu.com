@@ -7,12 +7,14 @@
   .event {
     background-color: rgba(0, 0, 0, .1);
     border-radius: .5rem;
+    color: inherit;
     cursor: pointer;
     display: grid;
     grid-gap: var(--spacing-large);
     grid-template-columns: 22rem 1fr;
     margin: var(--spacing) 0;
     padding: var(--spacing-large);
+    text-decoration: none;
     width: 100%;
 
     transition: all var(--transition);
@@ -32,6 +34,7 @@
     }
 
     img {
+      height: auto;
       width: 100%;
     }
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://guillaumebeaulieu.com/</loc>
+  <lastmod>2024-11-27T08:47:31+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://guillaumebeaulieu.com/biographie</loc>
+  <lastmod>2024-11-27T08:47:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://guillaumebeaulieu.com/programme</loc>
+  <lastmod>2024-11-27T08:47:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://guillaumebeaulieu.com/diskographie</loc>
+  <lastmod>2024-11-27T08:47:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://guillaumebeaulieu.com/medien</loc>
+  <lastmod>2024-11-27T08:47:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://guillaumebeaulieu.com/links</loc>
+  <lastmod>2024-11-27T08:47:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+</urlset>

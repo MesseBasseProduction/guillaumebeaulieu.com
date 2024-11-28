@@ -11,9 +11,11 @@
   .release {
     background-color: rgba(0, 0, 0, .1);
     border-radius: .5rem;
+    color: inherit;
     cursor: pointer;
     padding: var(--spacing);
     text-align: center;
+    text-decoration: none;
 
     transition: all var(--transition);
 

@@ -16,7 +16,7 @@ module.exports = {
     path: path.resolve(__dirname, '../assets/dist'),
     library: 'gb', // We set a library name to bundle the export default of the class
     libraryTarget: 'window', // Make it globally available
-    libraryExport: 'default' // Make mbp.default become mbp
+    libraryExport: 'default' // Make gb.default become gb
   },
   plugins: [
     new webpack.ProgressPlugin(),
