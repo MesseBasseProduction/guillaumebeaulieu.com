@@ -1,4 +1,3 @@
-version: "3"
 services:
   guillaumebeaulieu.com:
     container_name: guillaumebeaulieu.com_node
