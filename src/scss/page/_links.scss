@@ -1,9 +1,10 @@
 .links-wrapper {
-  display: grid;
-  grid-gap: var(--spacing);
-  grid-template-columns: repeat(auto-fill, 18rem);
+  display: flex;
+  column-gap: var(--spacing);
+  flex-wrap: wrap;
   justify-content: center;
   max-width: 66%;
+  row-gap: var(--spacing);
   width: 100%;
 
   .link {
@@ -17,6 +18,8 @@
     flex-direction: column;
     height: 100%;
     justify-content: center;
+    margin: 0;
+    max-width: 19rem;
     padding: var(--spacing);
     text-align: center;
     text-decoration: none;

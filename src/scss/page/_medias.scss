@@ -1,9 +1,10 @@
 .medias-wrapper {
-  display: grid;
-  grid-gap: var(--spacing-large);
-  grid-template-columns: repeat(auto-fill, 60rem);
+  column-gap: var(--spacing-large);
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   max-width: 66%;
+  row-gap: var(--spacing-large);
   width: 100%;
 
   .media {
@@ -12,6 +13,7 @@
     cursor: pointer;
     padding: var(--spacing);
     text-align: center;
+    width: calc(50% - var(--spacing-large));
 
     transition: all var(--transition);
 

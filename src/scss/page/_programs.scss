@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   max-width: 66%;
+  row-gap: var(--spacing-large);
   width: 100%;
 
   .event {
@@ -12,20 +13,12 @@
     display: grid;
     grid-gap: var(--spacing-large);
     grid-template-columns: 22rem 1fr;
-    margin: var(--spacing) 0;
+    margin: 0;
     padding: var(--spacing-large);
     text-decoration: none;
     width: 100%;
 
     transition: all var(--transition);
-
-    &:first-of-type {
-      margin-top: 0;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
 
     &:active,
     &:focus,

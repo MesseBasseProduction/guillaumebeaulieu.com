@@ -52,7 +52,7 @@ class gb {
      * @type {String}
      * @private
      **/
-    this._version = '1.1.0';
+    this._version = '1.2.0';
 
     // Update debug flag if it is given in the url
     if (window.location.href.indexOf('?debug') !== -1) {

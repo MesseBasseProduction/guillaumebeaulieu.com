@@ -172,7 +172,10 @@ main {
 }
 /* Page footer */
 footer {
+  align-items: center;
   border-bottom: solid 5px var(--color-main);
+  display: flex;
+  flex-direction: column;
   padding: var(--spacing-large) 0;
   text-align: center;
   width: 100%;
@@ -181,18 +184,18 @@ footer {
     margin-bottom: 0;
     text-decoration: none;
     transition: all var(--transition);
+    width: max-content;
 
     &:active,
     &:focus,
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.005);
     }
 
     img {
       height: auto;
       min-width: 20rem;
       max-width: 30rem;
-      width: 33%;
     }
   }
 

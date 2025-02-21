@@ -1,6 +1,6 @@
 {
   "name": "guillaumebeaulieu.com",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Official website for Guillaume Beaulieu, baroque recorder player",
   "keywords": [],
   "main": "src/gb.js",

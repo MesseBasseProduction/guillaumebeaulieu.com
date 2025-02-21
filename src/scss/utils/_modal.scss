@@ -104,6 +104,7 @@
           .release-info {
             border-bottom: solid 1px var(--color-main);
             padding: var(--spacing-large) 0;
+            width: calc(100% - var(--default-scroll-size));
 
             h2 {
               margin-bottom: var(--spacing-tiny);

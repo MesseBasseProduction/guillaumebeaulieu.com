@@ -1,18 +1,19 @@
 /* Page content */
 .releases-wrapper {
-  align-items: center;
-  display: grid;
-  grid-gap: var(--spacing-large);
-  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: var(--spacing-large);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 100%;
-  padding: 0 var(--spacing-large);
   padding-bottom: var(--spacing-large);
+  row-gap: var(--spacing-large);
 
   .release {
     background-color: rgba(0, 0, 0, .1);
     border-radius: .5rem;
     color: inherit;
     cursor: pointer;
+    margin: 0;
     padding: var(--spacing);
     text-align: center;
     text-decoration: none;
@@ -29,7 +30,7 @@
     img {
       border-radius: .5rem;
       box-shadow: 0 0 .5rem rgba(255, 255, 255, .1);
-      width: 30rem;
+      width: max(30rem, 50%);
     }
 
     h1 {
