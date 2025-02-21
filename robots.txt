@@ -1,4 +1,6 @@
-User-Agent: *
+User-agent: *
+Allow: /
+
 Sitemap: https://guillaumebeaulieu.com/assets/xml/sitemap-de.xml
 Sitemap: https://guillaumebeaulieu.com/assets/xml/sitemap-en.xml
 Sitemap: https://guillaumebeaulieu.com/assets/xml/sitemap-es.xml

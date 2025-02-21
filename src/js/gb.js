@@ -63,7 +63,7 @@ class gb {
     this._lang = localStorage.getItem('website-lang');
     if (this._lang === null) {
       // If no local storage entry exists, check if browser language is supported and use it if so, defaults to english otherwise
-      this._lang = (SUPPORTED_LANGUAGES.indexOf(navigator.language.substring(0, 2)) !== -1) ? navigator.language.substring(0, 2) : 'en';
+      this._lang = (SUPPORTED_LANGUAGES.indexOf(navigator.language.substring(0, 2)) !== -1) ? navigator.language.substring(0, 2) : 'fr';
       // Save curent language in local storage
       localStorage.setItem('website-lang', this._lang);
     }
@@ -75,6 +75,7 @@ class gb {
       .then(this._finalizeInit.bind(this))
       .catch(err => { // Error are displayed even if DEBUG is set to false, to notify end user to contact support
         console.error(`guillaumebeaulieu.com v${this._version} : Fatal error during initialization, please contact support :\n`, err);
+        // TODO redirect to error page, contact admin etc
       })
       .finally(() => {
         if (DEBUG === true) { console.log(`guillaumebeaulieu.com v${this._version} : Website initialization done`); }
@@ -119,6 +120,8 @@ class gb {
           document.querySelector('#nls-nav-programs').href = `/${this._nls.pages.programs}`;
           document.querySelector('#nls-nav-discography').innerHTML = this._nls.nav.discography;
           document.querySelector('#nls-nav-discography').href = `/${this._nls.pages.discography}`;
+          document.querySelector('#nls-nav-events').innerHTML = this._nls.nav.events;
+          document.querySelector('#nls-nav-events').href = `/${this._nls.pages.events}`;
           document.querySelector('#nls-nav-medias').innerHTML = this._nls.nav.medias;
           document.querySelector('#nls-nav-medias').href = `/${this._nls.pages.medias}`;
           document.querySelector('#nls-nav-links').innerHTML = this._nls.nav.links;
@@ -128,6 +131,10 @@ class gb {
             localStorage.setItem('website-lang', e.target.value);
             window.location.reload();
           });
+
+          if (this._lang === 'he') {
+            document.body.classList.add('rtl');
+          }
           resolve();
         }).catch(err => {
           if (DEBUG === true) { console.error(`Can't parse language keys, the JSON file may be is invalid`); }
@@ -197,6 +204,9 @@ class gb {
           break;
         case 'discography':
           this._buildDiscographyPage();
+          break;
+        case 'events':
+          this._buildEventsPage();
           break;
         case 'medias':
           this._buildMediasPage();
@@ -313,6 +323,121 @@ class gb {
       document.querySelector('#releases-wrapper').appendChild(container);
       container.addEventListener('click', this._releaseModal.bind(this, i));
     }
+  }
+
+
+  /**
+   * @method
+   * @name _buildEventsPage
+   * @private
+   * @memberof gb
+   * @author Arthur Beaulieu
+   * @since February 2025
+   * @description <blockquote>
+   * Build the artist's upcoming and past events.
+   * </blockquote> **/
+  _buildEventsPage() {
+    if (DEBUG === true) { console.log(`    Init website with the artist events page`); }
+    // Update page title
+    document.title = `Guillaume Beaulieu | ${this._nls.nav.events}`;
+    document.querySelector('#nls-events-description').innerHTML = this._nls.events.description;
+
+    // First we determine user's local date formatted YYY-MM-DD
+    this._now = new Date();
+    const offset = this._now.getTimezoneOffset();
+    this._now = new Date(this._now.getTime() - (offset * 60 * 1000));
+    this._now = this._now.toISOString().split('T')[0]
+
+    let hasUpcoming = false; // To know if the H1 requires to be added for upcoming event
+    let hasPast = false;
+    const years = {};
+
+    let targetDOM = document.createElement('DIV');
+    targetDOM.classList.add('event-holder');
+    
+    for (let i = 0; i < this._info.events.length; ++i) {
+      // First case, the event hasn't occured yet, it is an upcoming one
+      if (hasUpcoming === false && this._info.events[i].date >= this._now) {
+        hasUpcoming = true;
+        const header = document.createElement('H1');
+        header.innerHTML = this._nls.events.upcoming;
+        document.querySelector('#events-wrapper').appendChild(header);
+        document.querySelector('#events-wrapper').appendChild(targetDOM);
+        let upcomingScroll = new ScrollBar({
+          target: targetDOM,
+          horizontal: true,
+          style: {
+            color: 'white'
+          }
+        });
+        requestAnimationFrame(() => upcomingScroll.updateScrollbar());
+        targetDOM = targetDOM.firstElementChild.firstElementChild;
+      } else if (this._info.events[i].date < this._now && hasPast === false) {
+        hasPast = true;
+        const header = document.createElement('H1');
+        header.innerHTML = this._nls.events.past;
+        document.querySelector('#events-wrapper').appendChild(header);
+        // If already has upcoming event, need to create another event holder
+        if (hasUpcoming === true) {
+          targetDOM = document.createElement('DIV');
+          targetDOM.classList.add('event-holder');
+          document.querySelector('#events-wrapper').appendChild(targetDOM);
+          let pastScroll = new ScrollBar({
+            target: targetDOM,
+            horizontal: true,
+            minSize: 200,
+            style: {
+              color: 'white'
+            }
+          });
+          requestAnimationFrame(() => pastScroll.updateScrollbar());
+          targetDOM = targetDOM.firstElementChild.firstElementChild;
+        } else {
+          document.querySelector('#events-wrapper').appendChild(targetDOM);
+        }
+      }
+      // Now check for year header in past events section
+      const studiedYear = this._info.events[i].date.slice(0, 4);
+      if (!years[studiedYear] && this._info.events[i].date < this._now) {
+        years[studiedYear] = studiedYear;
+        const header = document.createElement('H2');
+        header.innerHTML = studiedYear;
+        targetDOM.appendChild(header);
+      }
+
+      const event = document.createElement('DIV');
+      event.classList.add('event');
+
+      const container = document.createElement('DIV');
+      container.classList.add('event-content');
+  
+      const image = document.createElement('IMG');
+      image.src = this._info.events[i].image;
+  
+      const content = document.createElement('DIV');
+      content.classList.add('content');
+
+      const date = new Intl.DateTimeFormat(this._lang, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }).format(new Date(this._info.events[i].date));
+
+      content.innerHTML = `
+        <span>
+          <h3><a href="${this._info.events[i].link}" target="_blank" rel="noreferrer noopener">${this._info.events[i].title}</a></h3>
+          <h4>${date}<br><i>${this._info.events[i].place}</i></h4>
+        </span>
+        <p>${this._info.events[i].description[this._lang]}</p>
+      `;
+      content.innerHTML.replace('\n', '');
+    
+      container.appendChild(image);
+      container.appendChild(content);
+      event.appendChild(container);
+      targetDOM.appendChild(event);
+    }
+
   }
 
 
@@ -458,6 +583,9 @@ class gb {
       resolve();
     });
   }
+
+
+  /* Modal utils */
 
 
   /**

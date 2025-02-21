@@ -141,6 +141,7 @@
             grid-template-columns: repeat(auto-fill, 17rem);
             justify-content: space-around;
             padding: var(--spacing-large) 0;
+            width: calc(100% - var(--default-scroll-size));
 
             .link {
               align-items: center;

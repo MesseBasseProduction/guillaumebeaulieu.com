@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "lang": "שפה",
+    "biography": "ביוגרפיה",
+    "programs": "תוכניות",
+    "discography": "דיסקוגרפיה",
+    "events": "דיסקוגרפיה",
+    "medias": "מדיה",
+    "links": "קישורים",
+    "error404": "העמוד אינו קיים"
+  },
+  "pages": {
+    "biography": "biography",
+    "programs": "programs",
+    "discography": "discography",
+    "events": "events",
+    "medias": "medias",
+    "links": "links"
+  },
+  "biography": {
+    "findOnline": "מצא את גיומב בוליו <a href=\"/links\" alt=\"artist-links\">באינטרנט</a>."
+  },
+  "programs": {
+    "description": "תוכניות קונצרטים וסדנאות מאסטר המוצעות על ידי גיום.",
+    "contact": "לפרטים נוספים, אתם יכולים ליצור איתנו קשר בכתובת <a href=\"mailto:contact@messe-basse-production.com\">contact@messe-basse-production.com</a>.\" alt=\"program-contact-link\">contact@messe-basse-production.com</a>."
+  },
+  "discography": {
+    "description": "הפקות הכוללות הופעות של גיום בולייה, בין אם סולו ובין אם בהרכב.  לחצו על כל דיסק כדי לראות את המידע והקישורים הקשורים."
+  },
+  "events": {
+    "description": "קונצרטים, כנסים ואירועים שיבואו (כמו גם כאלה שהיו) שניתנים על ידי גיומא בולייה כסולן או עם הרכב.",
+    "upcoming": "אירועים קרובים",
+    "past": "אירועים מהעבר"
+  },
+  "medias": {
+    "description": "הפקות אודיו-ויזואליות שבהן מופיע גיומב בוליו.",
+    "link": "אתם יכולים גם לגלות את ההפקות של התזמורות בהן משתתף גיומבו בוליו בערוץ ה-<a href=\"https://youtube.com/@GuillaumeBeaulieuRecorder/\" target=\"_blank\" rel=\"noreferrer noopener\">YouTube</a> שלו.ערוץ היוטיוב."
+  },
+  "links": {
+    "description": "מצא את גיומא בוליו ברשתות החברתיות ובפלטפורמות מקוונות.",
+    "contact": "אל תהססו לפנות אלינו בדוא\"ל לכתובת <a href=\"mailto:contact@messe-basse-production.com\">contact@messe-basse-production.com</a>.",
+    "7digital": "7Digital",
+    "amazon": "Amazon Music",
+    "apple": "Apple Music",
+    "bandcamp": "Bandcamp",
+    "deezer": "Deezer",
+    "discogs": "Discogs",
+    "facebook": "Facebook",
+    "fnac": "Fnac",
+    "instagram": "Instagram",
+    "musicbrainz": "MusicBrainz",
+    "qobuz": "Qobuz",
+    "soundcloud": "Soundcloud",
+    "spotify": "Spotify",
+    "tidal": "Tidal",
+    "youtube": "YouTube"
+  },
+  "page404": {
+    "title": "שגיאה 404",
+    "description": "העמוד שאתה מחפש אינו קיים. אנא השתמשו בשורת הניווט כדי לעבור לדף ספציפי."
+  },
+  "modal": {
+    "info": {
+      "title": "על אודות",
+      "content1": "אתר זה מפורסם ומאוחסן בצרפת על ידי הארגון לפי חוק 1901 Messe Basse Production (מספר RNA W911005952, סרמז – צרפת). קוד המקור של אתר זה נגיש במאגר זה <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a> ומופץ תחת רישיון הקוד הפתוח GPL-3.0.",
+      "content2": "התכנים הפוטוגרפיים, הטקסטואליים והאודיו-ויזואליים הנמצאים באתר זה מוגנים; כל שימוש חוזר מחוץ להקשר זה דורש אישור מראש שיש לקבל מ- <a href=\"mailto:contact@messe-basse-production.com\" alt=\"mail-contact\">contact@messe-basse-production.com</a> וכל שימוש חוזר בתוכן חייב להיות מלווה בהזכרת מחבר התוכן הנ\"ל.",
+      "content3": "כדי למדוד את קהל הגולשים באתר זה ובהתאם להמלצות ה-CNIL בנוגע ל-GDPR, האתר הזה משתמש בכלי אנליטיקה, <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\" target=\"_blank\" rel=\"noreferrer noopener\">Matomo</a> שמכבד את פרטיות המשתמשים שלו. העוגיות המשמשות למדידת הקהל אינן דורשות הסכמה. מסה באסה פרודקשן מבטיחה שלא נאספים נתונים אישיים ושאין נתונים שיש להם זכות להיות בשימוש למטרות מסחריות."
+    },
+    "release": {
+      "discFrom": "דיסק של",
+      "publishedOn": "פורסם ב",
+      "publishedBy": "על ידי",
+      "tracks": "רצועות"
+    }
+  },
+  "close": "סגור",
+  "lang": {
+    "fr": "🇫🇷 צרפתית",
+    "en": "🇬🇧 אנגלית",
+    "es": "🇪🇸 ספרדית",
+    "it": "🇮🇹 איטליה",
+    "pt": "🇵🇹 פורטוגזית",
+    "de": "🇩🇪 גרמני",
+    "he": "🇮🇱 עברים",
+    "ja": "🇯🇵 יפני"
+  }
+}

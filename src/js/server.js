@@ -27,6 +27,10 @@ const discography = (req, res) => {
   console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | 200 ${req.originalUrl} page requested, return discography.html`);
   res.sendFile(path.join(__dirname, '../../assets/html/discography.html'));
 };
+const events = (req, res) => {
+  console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | 200 ${req.originalUrl} page requested, return events.html`);
+  res.sendFile(path.join(__dirname, '../../assets/html/events.html'));
+};
 const medias = (req, res) => {
   console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | 200 ${req.originalUrl} page requested, return medias.html`);
   res.sendFile(path.join(__dirname, '../../assets/html/medias.html'));
@@ -47,7 +51,7 @@ for (let i = 0; i < biographyPage.length; ++i) {
   app.get(biographyPage[i], biography);
 }
 
-const programsPage = ['/programs', '/programmes', '/programme', '/programas'];
+const programsPage = ['/programs', '/programmes', '/programme', '/programas', '/programmi'];
 for (let i = 0; i < programsPage.length; ++i) {
   app.get(programsPage[i], programs);
 }
@@ -57,12 +61,17 @@ for (let i = 0; i < discographyPage.length; ++i) {
   app.get(discographyPage[i], discography);
 }
 
-const mediasPage = ['/medias', '/medien', '/medios', '/midia'];
+const eventsPage = ['/events', '/evenements', '/ereignisse', '/evento', '/eventi'];
+for (let i = 0; i < eventsPage.length; ++i) {
+  app.get(eventsPage[i], events);
+}
+
+const mediasPage = ['/medias', '/medien', '/medios', '/midia', '/medias'];
 for (let i = 0; i < mediasPage.length; ++i) {
   app.get(mediasPage[i], medias);
 }
 
-const linksPage = ['/links', '/liens', '/enlaces', '/ligacoes'];
+const linksPage = ['/links', '/liens', '/enlaces', '/ligacoes', '/link'];
 for (let i = 0; i < linksPage.length; ++i) {
   app.get(linksPage[i], links);
 }

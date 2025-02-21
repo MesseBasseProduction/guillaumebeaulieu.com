@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "lang": "Lingua",
+    "biography": "Biografia",
+    "programs": "Programmi",
+    "discography": "Discografia",
+    "events": "Eventi",
+    "medias": "Medias",
+    "links": "Link",
+    "error404": "La pagina non esiste"
+  },
+  "pages": {
+    "biography": "biografia",
+    "programs": "programmi",
+    "discography": "discografia",
+    "events": "eventi",
+    "medias": "medias",
+    "links": "link"
+  },
+  "biography": {
+    "findOnline": "Trova Guillaume Beaulieu <a href=\"/links\" alt=\"artist-links\">su internet</a>."
+  },
+  "programs": {
+    "description": "Programmi di concerti e masterclass proposti da Guillaume.",
+    "contact": "Per ulteriori informazioni, puoi contattarci all'indirizzo <a href=\"mailto:contact@messe-basse-production.com\" alt=\"program-contact-link\">contact@messe-basse-production.com</a>."
+  },
+  "discography": {
+    "description": "Produzioni che presentano esibizioni di Guillaume Beaulieu, sia da solo che in ensemble.  Clicca su qualsiasi disco per vedere le informazioni e i link associati."
+  },
+  "events": {
+    "description": "Concerti, conferenze ed eventi futuri (così come quelli passati) tenuti da Guillaume Beaulieu come solista o con un ensemble.",
+    "upcoming": "Eventi in arrivo",
+    "past": "Eventi passati"
+  },
+  "medias": {
+    "description": "Produzioni audiovisive in cui appare Guillaume Beaulieu.",
+    "link": "Puoi anche scoprire le produzioni degli ensemble a cui partecipa Guillaume Beaulieu sul suo <a href=\"https://youtube.com/@GuillaumeBeaulieuRecorder/\" target=\"_blank\" rel=\"noreferrer noopener\">canale YouTube</a>."
+  },
+  "links": {
+    "description": "Trova Guillaume Beaulieu sui social network e sulle piattaforme online.",
+    "contact": "Non esitate a contattarci via email all'indirizzo <a href=\"mailto:contact@messe-basse-production.com\">contact@messe-basse-production.com</a>.",
+    "7digital": "7Digital",
+    "amazon": "Amazon Music",
+    "apple": "Apple Music",
+    "bandcamp": "Bandcamp",
+    "deezer": "Deezer",
+    "discogs": "Discogs",
+    "facebook": "Facebook",
+    "fnac": "Fnac",
+    "instagram": "Instagram",
+    "musicbrainz": "MusicBrainz",
+    "qobuz": "Qobuz",
+    "soundcloud": "Soundcloud",
+    "spotify": "Spotify",
+    "tidal": "Tidal",
+    "youtube": "YouTube"
+  },
+  "page404": {
+    "title": "Errore 404",
+    "description": "La pagina che stai cercando non esiste.  Si prega di utilizzare la barra di navigazione per andare a una pagina specifica."
+  },
+  "modal": {
+    "info": {
+      "title": "Circa",
+      "content1": "Questo sito web è pubblicato e ospitato in Francia dall'organizzazione di legge 1901 Messe Basse Production (numero RNA W911005952, Sermaise – Francia).  Il codice sorgente di questo sito web è accessibile su questo repository <a href=\"https://github.com/MesseBasseProduction/guillaumebeaulieu.com\" alt=\"github-link\" target=\"_blank\" rel=\"noreferrer noopener\">GitHub</a> ed è distribuito sotto la licenza open source GPL-3.0.",
+      "content2": "I contenuti fotografici, testuali e audiovisivi presenti su questo sito web sono protetti; qualsiasi riutilizzo al di fuori di questo contesto richiede un'autorizzazione preventiva da ottenere da <a href=\"mailto:contact@messe-basse-production.com\" alt=\"mail-contact\">contact@messe-basse-production.com</a> e ogni riutilizzo dei contenuti deve essere accompagnato da una menzione dell'autore di detti contenuti.",
+      "content3": "Per misurare l'audience di questo sito web e in conformità con le raccomandazioni della CNIL riguardanti il GDPR, questo sito utilizza uno strumento di analisi, <a href=\"https://matomo.org/\" alt=\"matomo-analytics-link\" target=\"_blank\" rel=\"noreferrer noopener\">Matomo</a>, che rispetta la privacy dei suoi utenti.  I cookie utilizzati per misurare l'audience non richiedono il consenso.  Messe Basse Production garantisce che non vengono raccolti dati personali e che nessun dato ha il diritto di essere utilizzato per scopi commerciali."
+    },
+    "release": {
+      "discFrom": "Un disco di",
+      "publishedOn": "Pubblicato il",
+      "publishedBy": "da",
+      "tracks": "tracce"
+    }
+  },
+  "close": "Chiudi",
+  "lang": {
+    "fr": "🇫🇷 Francese",
+    "en": "🇬🇧 Inglese",
+    "es": "🇪🇸 Spagnolo",
+    "it": "🇮🇹 Italiano",
+    "pt": "🇵🇹 Portoghese",
+    "de": "🇩🇪 Tedesco",
+    "he": "🇮🇱 Ebrei",
+    "ja": "🇯🇵 Giapponese"
+  }
+}

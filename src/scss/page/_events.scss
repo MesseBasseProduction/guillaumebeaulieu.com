@@ -1,0 +1,98 @@
+.events-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 66%;
+  width: 100%;
+
+  h1 {
+    margin-bottom: var(--spacing);
+    text-align: center;
+  }
+
+  .event-holder {
+    height: calc(25rem + var(--spacing));
+    margin-bottom: var(--spacing-large);
+    overflow-x: auto;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+
+    h2 {
+      display: inline-block;
+      height: 25rem;
+      line-height: 25rem;
+      margin-right: var(--spacing);
+      padding: 0;
+      vertical-align: bottom;
+    }
+
+    .event {
+      color: white;
+      display: inline-block;
+      height: 25rem;
+      margin: 0;
+      margin-right: var(--spacing);
+      max-width: 70rem;
+      text-decoration: none;
+      width: 70rem;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+
+    .event-content {
+      background-color: rgba(0, 0, 0, .1);
+      border-radius: .5rem;
+      color: inherit;
+      cursor: pointer;
+      display: flex;
+      padding: var(--spacing);
+      width: fit-content;
+      white-space: initial;
+
+      transition: all var(--transition);
+  
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: rgba(255, 255, 255, .1);
+        transform: scale(1.005);
+      }
+  
+      img {
+        border-radius: .5rem;
+        height: calc(25rem - (2 * var(--spacing)));
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-left: var(--spacing);
+        text-align: justify;
+
+        h3 {
+          margin-bottom: var(--spacing-small);
+          padding-left: var(--spacing);
+
+          a {
+            font-size: 2rem;
+            margin: 0;
+            text-decoration: none;
+          }
+        }
+
+        h4 {
+          margin-bottom: var(--spacing-small);
+        }
+
+        p, a {
+          color: white;
+          display: inline-block;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

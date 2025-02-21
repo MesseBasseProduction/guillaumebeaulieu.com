@@ -4,6 +4,7 @@
     "biography": "バイオグラフィー",
     "programs": "プログラム",
     "discography": "ディスコグラフィー",
+    "events": "イベント",
     "medias": "メディア",
     "links": "リンク",
     "error404": "ページが存在しません"
@@ -12,6 +13,7 @@
     "biography": "biography",
     "programs": "programs",
     "discography": "discography",
+    "events": "events",
     "medias": "medias",
     "links": "links"
   },
@@ -24,6 +26,11 @@
   },
   "discography": {
     "description": "ソロでもアンサンブルでも、ギョーム・ボーリューの解釈をフィーチャーした作品。ディスクをクリックすると、情報と関連リンクが表示されます。"
+  },
+  "events": {
+    "description": "ギョーム・ボーリューがソリストまたはアンサンブルとして今後開催するコンサート、カンファレンス、イベント（および過去のイベントも含む）。",
+    "upcoming": "今後のイベント",
+    "past": "過去のイベント"
   },
   "medias": {
     "description": "ギョーム・ボーリューが出演するオーディオビジュアル作品。",
@@ -68,11 +75,13 @@
   },
   "close": "近い",
   "lang": {
-    "en": "🇬🇧 英語",
     "fr": "🇫🇷 フランス語",
+    "en": "🇬🇧 英語",
     "es": "🇪🇸 スペイン語",
+    "it": "🇮🇹 イタリア語",
     "pt": "🇵🇹 ポルトガル語",
     "de": "🇩🇪 ドイツ語",
+    "he": "🇮🇱 ヘブライ人への手紙",
     "ja": "🇯🇵 日本語"
   }
 }

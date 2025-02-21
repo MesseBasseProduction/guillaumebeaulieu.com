@@ -4,6 +4,7 @@
     "biography": "Biographie",
     "programs": "Programmes",
     "discography": "Discographie",
+    "events": "Évènements",
     "medias": "Médias",
     "links": "Liens",
     "error404": "Page inexistante"
@@ -12,6 +13,7 @@
     "biography": "biographie",
     "programs": "programs",
     "discography": "discographie",
+    "events": "evenements",
     "medias": "medias",
     "links": "liens"
   },
@@ -24,6 +26,11 @@
   },
   "discography": {
     "description": "Productions sur lesquels figurent des interprétations de Guillaume Beaulieu, que ce soit en solo ou en ensemble. Cliquez sur un disque voir les informations et les liens associés."
+  },
+  "events": {
+    "description": "Concerts, conférences et évènements à venir (ainsi que passés) donnés par Guillaume Beaulieu en soliste ou en ensemble.",
+    "upcoming": "Évènements à venir",
+    "past": "Évènements passés"
   },
   "medias": {
     "description": "Productions audio-visuelles dans lesquelles Guillaume Beaulieu apparaît.",
@@ -68,11 +75,13 @@
   },
   "close": "Fermer",
   "lang": {
-    "en": "🇬🇧 Anglais",
     "fr": "🇫🇷 Français",
+    "en": "🇬🇧 Anglais",
     "es": "🇪🇸 Espagnol",
+    "it": "🇮🇹 Italien",
     "pt": "🇵🇹 Portuguais",
     "de": "🇩🇪 Allemand",
+    "he": "🇮🇱 Hébreux",
     "ja": "🇯🇵 Japonais"
   }
 }

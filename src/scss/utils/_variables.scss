@@ -1,3 +1,11 @@
+/* Define custom font */
+@font-face {
+  font-family: 'Tangerine';
+  src: url('../../assets/font/Tangerine_Regular.ttf') format('truetype'),
+    url('../../assets/font/Tangerine_Regular.woff') format('woff');
+  font-display: swap;
+}
+
 /* Global variable definition */
 :root {
   --spacing-huge: 8rem;

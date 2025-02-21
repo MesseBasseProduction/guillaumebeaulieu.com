@@ -61,11 +61,13 @@
   <div class="interaction-wrapper">
     <label for="lang-select" id="nls-header-select-label">Langue</label>
     <select id="lang-select">
-      <option value="en">🇬🇧 Anglais</option>
       <option value="fr">🇫🇷 Français</option>
+      <option value="en">🇬🇧 Anglais</option>
       <option value="es">🇪🇸 Espagnol</option>
+      <option value="it">🇮🇹 Italien</option>
       <option value="pt">🇵🇹 Portuguais</option>
       <option value="de">🇩🇪 Allemand</option>
+      <option value="he">🇮🇱 Hébreux</option>
       <option value="ja">🇯🇵 Japonais</option>
     </select>
     <div class="social-shortcuts">
@@ -85,6 +87,7 @@
   <a href="/biography" id="nls-nav-biography" class="active" alt="artist-biography">Biographie</a>
   <a href="/programs" id="nls-nav-programs" alt="artist-programs">Programmes</a>
   <a href="/discography" id="nls-nav-discography" alt="artist-discography">Discographie</a>
+  <a href="/events" id="nls-nav-events" alt="artist-events">Évènements</a>
   <a href="/medias" id="nls-nav-medias" alt="artist-medias">Médias</a>
   <a href="/links" id="nls-nav-links" alt="artist-links">Liens</a>
 </nav>
@@ -110,7 +113,7 @@
   <a href="https://messe-basse-production.com" target="_blank" rel="noreferrer noopener">
     <img src="/assets/img/logo/mbp-text-white.webp" alt="messe-basse-production-logo" height="42" width="300">
   </a>
-  <a href="#" id="info-modal" class="info-modal">© 2024</a>
+  <a href="#" id="info-modal" class="info-modal">© 2024/<span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span></a>
 </footer>
 <div id="loading-overlay" class="loading-overlay"></div>
 <div id="modal-overlay" class="modal-overlay"></div>
