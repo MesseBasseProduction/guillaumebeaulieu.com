@@ -25,8 +25,67 @@
       "ja": "ギョーム・ボーリューは、10 歳のときにパリ地方の Massy 音楽院でリコーダーを吹き始めました。彼は 2010 年に Chevreuse バレーの CRD の <i>Jean-Pierre Nicolas</i> のクラスで、陪審員全員の祝福を受けてリコーダーの DEM を取得し、その後、Lyon の CNSMD で <i>Pierre Hamon</i> のクラスに参加しました。彼は 2015 年に優秀な成績でそこで修士号を取得する予定です。古楽に対する彼の趣味は、通奏低音に興味を持つようになりました。こうして彼は、Chevreuse渓谷のCRDで<i>Michèle Dévérité</i>からチェンバロを学び、訓練を完了しました。<br><br>この多才さにより、彼はフランスおよび海外（ブラジル、日本、ポーランド、オランダ、ベルギー、イスラエルなど) でさまざまなアンサンブル (Ensemble Pygmalion、les Nouveaux Caractères、Ensemble Canzona、Orchestre Français des Jeunes Baroques)と共演することができます。<br><br>彼はフルートアンサンブルでいくつかの賞を受賞しています。Consort Brouillamini (Vanves 2016 International Early Music Days Competitionで第 1 位、Musée en musique de Grenoble 2015 の音楽シーズンの公的賞)。ギョームはまた、Moeck / SRP solo recorder competition 2017国際コンクールでソリストとして第2位、Nordhornコンクールで第3位、2019年のNew-York国際コンクールで第3位 (ゴールデン・クラシック音楽賞) を受賞したほか、第1位も受賞している。 2020年Tel-Aviv国際ソリストコンクールで賞を受賞。<br><br>楽器の指導に情熱を注ぐギョームは、Marcoussis 芸術学校や、自身が所長でもある Chevilly-Larue 音楽院で定期的にマスタークラスを開催し、リコーダーを教えています。"
     }
   },
+  "actus": [
+    {
+      "title": {
+        "fr": "Campagne de financement participatif<br>Enregistrement de disque",
+        "en": "Crowdfunding campain : Record  ",
+        "es": "",
+        "it": "",
+        "de": "",
+        "pt": "",
+        "he": "",
+        "ja": ""
+      },
+      "image": "/assets/img/actus/vinci.webp",
+      "link": "https://www.helloasso.com/associations/messe-basse-production/collectes/guillaume-beaulieu-il-flauto-di-leonardo-production-de-disque",
+      "description": {
+        "fr": "Un projet ambitieux qui à pour but de fixer sur un disque des sonates méconnues de Leonardo Vinci, compositeur de la cour napolitaine. Pour y parvenir, je m'entoure de Antoine Touche au violoncelle et Thomas Soltani au clavecin.",
+        "en": "Crowdfunding campain : Record  ",
+        "es": "",
+        "it": "",
+        "de": "",
+        "pt": "",
+        "he": "",
+        "ja": ""
+      },
+      "cta": {
+        "fr": "Deviens mécène du disque!",
+        "en": "Crowdfunding campain : Record  ",
+        "es": "",
+        "it": "",
+        "de": "",
+        "pt": "",
+        "he": "",
+        "ja": ""
+      }
+    }
+  ],
   "programs": [
     {
+      "image": "vinci.webp",
+      "path": "Dossier de présentation - Il flauto di Leonardo.pdf",
+      "title": {
+        "fr": "Concert : <i>Il flauto di Leonardo</i>",
+        "en": "Concert : <i>Il flauto di Leonardo</i>",
+        "es": "Concierto: <i>Il flauto di Leonardo</i>",
+        "it": "Concerto: <i>Il flauto di Leonardo</i>",
+        "de": "Konzert: <i>Il flauto di Leonardo</i>",
+        "pt": "Concerto: <i>Il flauto di Leonardo</i>",
+        "he": "קונצרט: <i>Il flauto di Leonardo</i>",
+        "ja": "コンサート： レオナルドのフルート"
+      },
+      "description": {
+        "fr": "Il s'agit d'un concert qui à pour vocation de mettre en lumière le répertoire instrumental, méconnu, du compositeur napoilatin Leonardo Vinci. Succedant à Alessandro Scarlatti à la cours de Naples, Vinci s'est principalement illustré par l'écritures d'opéras baroques et de pièces vocales populaires en leur temps.<br><br>Ce programme s’articule autour de sonates pour flûte, extraites d’un recueil de 12 sonates (publié par Walsh en 1746) de la main de Vinci et d’autres compositeurs italiens. Très expressives, tantôt virtuoses et/ou démonstratives, parfois dramatiques, ces sonates illustrent parfaitement l’héritage de l’écriture vocale et soliste que l’on peut trouver dans les opéras de l’époque.<br><br>À cela s’ajoutent deux sonates, bien moins connues qui sont, elles, dédiées à la flûte à bec, mais tout aussi intéressantes et inédites. À travers ce programme, les musiciens tacheront d’illustrer la magnificence de cette période musicale, autour d’œuvres rarement jouées : les Sonates n°1, n°4, n°5 et n°9, ainsi que les Sonates en La mineur et en Do mineur pour flûte à bec.",
+        "en": "This is a concert that aims to highlight the little-known instrumental repertoire of the Neapolitan composer Leonardo Vinci. Succeeding Alessandro Scarlatti at the court of Naples, Vinci mainly distinguished himself by writing Baroque operas and vocal pieces that were popular in their time.<br><br>This program is structured around flute sonatas, taken from a collection of 12 sonatas (published by Walsh in 1746) by Vinci and other Italian composers. Very expressive, sometimes virtuoso and/or demonstrative, sometimes dramatic, these sonatas perfectly illustrate the legacy of vocal and solo writing that can be found in the operas of the period.<br><br>In addition, there are two sonatas, much less well-known, dedicated to the recorder, but just as interesting and unpublished. Through this program, the musicians will attempt to illustrate the magnificence of this musical period, around rarely performed works: Sonatas No. 1, No. 4, No. 5 and No. 9, as well as the Sonatas in A minor and C minor for recorder.",
+        "es": "Se trata de un concierto que tiene como objetivo poner de relieve el repertorio instrumental poco conocido del compositor napolitano Leonardo Vinci. Vinci sucedió a Alessandro Scarlatti en la corte de Nápoles y se distinguió principalmente por escribir óperas barrocas y piezas vocales populares en su época.<br><br>Este programa está estructurado en torno a sonatas para flauta, extraídas de una colección de 12 sonatas (publicadas por Walsh en 1746) de Vinci y otros compositores italianos. Muy expresivas, a veces virtuosas y/o demostrativas, a veces dramáticas, estas sonatas ilustran perfectamente la herencia de la escritura vocal y solista que se puede encontrar en las óperas de la época.<br><br>A esto se suman dos sonatas, mucho menos conocidas, dedicadas a la flauta dulce, pero igualmente interesantes y nuevas. A través de este programa, los músicos intentarán ilustrar la magnificencia de este período musical, en torno a obras raramente interpretadas: las Sonatas n.° 1, n.° 4, n.° 5 y n.° 9, así como las Sonatas en la menor y en do menor para flauta dulce.",
+        "it": "Si tratta di un concerto che si propone di mettere in luce il repertorio strumentale poco conosciuto del compositore napoletano Leonardo Vinci. Succedendo ad Alessandro Scarlatti alla corte di Napoli, Vinci si distinse principalmente scrivendo opere barocche e brani vocali popolari al loro tempo.<br><br>Questo programma è strutturato attorno a sonate per flauto, tratte da una raccolta di 12 sonate (pubblicate da Walsh nel 1746) di Vinci e altri compositori italiani. Molto espressive, a volte virtuosistiche e/o dimostrative, a volte drammatiche, queste sonate illustrano perfettamente l'eredità di scrittura vocale e solistica che si può trovare nelle opere dell'epoca.<br><br>A ciò si aggiungono due sonate, molto meno conosciute, dedicate al flauto dolce, ma altrettanto interessanti e nuove. Attraverso questo programma, i musicisti cercheranno di illustrare la magnificenza di questo periodo musicale, attorno ad opere raramente eseguite: le Sonate n. 1, n. 4, n. 5 e n. 9, così come le Sonate in la minore e do minore per flauto dolce.",
+        "de": "Ziel dieses Konzerts ist es, das wenig bekannte Instrumentalrepertoire des neapolitanischen Komponisten Leonardo Vinci hervorzuheben. Als Nachfolger von Alessandro Scarlatti am Hof ​​von Neapel zeichnete sich Vinci vor allem dadurch aus, dass er zu seiner Zeit populäre Barockopern und Vokalstücke schrieb.<br><br>Dieses Programm ist um Flötensonaten herum aufgebaut, die einer Sammlung von 12 Sonaten (veröffentlicht von Walsh im Jahr 1746) von Vinci und anderen italienischen Komponisten entnommen sind. Sehr ausdrucksstark, manchmal virtuos und/oder demonstrativ, manchmal dramatisch, veranschaulichen diese Sonaten perfekt das Erbe des Gesangs- und Solosatzes, das in den Opern dieser Zeit zu finden ist.<br><br>Dazu kommen zwei, viel weniger bekannte Sonaten, die der Blockflöte gewidmet sind, aber ebenso interessant und neu. Mit diesem Programm werden die Musiker versuchen, die Pracht dieser musikalischen Epoche anhand selten gespielter Werke zu veranschaulichen: Sonaten Nr. 1, Nr. 4, Nr. 5 und Nr. 9 sowie die Sonaten in a-Moll und c-Moll für Blockflöte.",
+        "pt": "Este é um concerto que pretende destacar o repertório instrumental pouco conhecido do compositor napolitano Leonardo Vinci. Sucedendo Alessandro Scarlatti na corte de Nápoles, Vinci destacou-se sobretudo pela escrita de óperas barrocas e peças vocais populares na sua época. <br><br>Este programa está estruturado em torno de sonatas para flauta, retiradas de uma coleção de 12 sonatas (publicadas por Walsh em 1746) de Vinci e outros compositores italianos. Muito expressivas, ora virtuosas e/ou demonstrativas, ora dramáticas, estas sonatas ilustram na perfeição a herança da escrita vocal e a solo que se pode encontrar nas óperas da época. <br><br>A isto juntam-se duas sonatas, muito menos conhecidas, dedicadas à flauta de bisel, mas igualmente interessantes e novas. Através deste programa, os músicos tentarão ilustrar a magnificência deste período musical, em torno de obras raramente tocadas: as Sonatas nº 1, nº 4, nº 5 e nº 9, bem como as Sonatas em lá menor e em dó menor para flauta de bisel.",
+        "he": "זהו קונצרט שמטרתו להדגיש את הרפרטואר האינסטרומנטלי הלא ידוע של המלחין מנאפולי לאונרדו וינצ'י. לאחר שהחליף את אלסנדרו סקרלטי בחצר נאפולי, וינצ'י בלט את עצמו בעיקר על ידי כתיבת אופרות בארוק וקטעים ווקאליים פופולריים בזמנם.<br><br>תוכנית זו בנויה סביב סונטות לחליל, שנלקחו מאוסף של 12 סונטות (שפורסם על ידי וולש ב-1746) מאת דה וינצ'י ומלחינים איטלקיים אחרים. סונטות מאוד אקספרסיביות, לפעמים וירטואוזיות ו/או מודגמות, לפעמים דרמטיות, ממחישות בצורה מושלמת את מורשת הכתיבה הווקאלית והסולנית שניתן למצוא באופרות של התקופה.<br><br>לכך מתווספות שתי סונטות, הרבה פחות מוכרות, המוקדשות לתקליט, אבל מעניינות וחדשות לא פחות. באמצעות תוכנית זו ינסו הנגנים להמחיש את הפאר של תקופה מוזיקלית זו, סביב יצירות המושמעות לעיתים רחוקות: סונטות מס' 1, מס' 4, מס' 5 ו-9, וכן הסונטות בדו מינור וסי מינור לחלילית.",
+        "ja": "これは、ナポリの作曲家レオナルド・ヴィンチのあまり知られていない器楽レパートリーに焦点を当てることを目的としたコンサートです。ナポリの宮廷でアレッサンドロ・スカルラッティの後を継いだヴィンチは、主に当時人気のあったバロック・オペラや声楽作品を書くことで頭角を現しました。<br><br>このプログラムは、ダ・ヴィンチや他のイタリアの作曲家による 12 のソナタ集 (1746 年にウォルシュによって出版) から抜粋されたフルート ソナタを中心に構成されています。非常に表現力豊かで、時には名人技や実証的、時にはドラマティックなこれらのソナタは、当時のオペラに見られる声楽と独唱の伝統を完璧に表しています。<br><br>これに加えて、あまり知られていないがリコーダー専用のソナタが 2 曲ありますが、同様に興味深く新しいものです。このプログラムを通じて、音楽家たちは、めったに演奏されることのないソナタ第 1 番、第 4 番、第 5 番、第 9 番、そしてリコーダーのためのソナタ イ短調とハ短調を中心に、この音楽時代の素晴らしさを説明しようと試みます。"
+      }
+    }, {
       "image": "telemann.webp",
       "path": "Dossier de présentation - Fantaisies de Telemann.pdf",
       "title": {
@@ -368,8 +427,8 @@
   ],
   "medias": [
     {
-      "title": "Guillaume Beaulieu – Teaser: Fantaisies pour flûte seule sans basse de Telemann",
-      "url": "https://tube.mycozy.space/videos/embed/ee42f997-9be1-4c27-9a96-7d12273a57bc",
+      "title": "Guillaume Beaulieu – 12 Fantaisies pour flûte seule sans basse de Telemann",
+      "url": "https://tube.mycozy.space/videos/embed/4h1fvWPp4hxv3VzQ9na7zc",
       "date": "2024-10-05"
     }, {
       "title": "Guillaume Beaulieu, Julien Faure – Telemann: Duo pour deux Flûtes à Bec",

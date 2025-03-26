@@ -1,7 +1,7 @@
 {
   "nav": {
     "lang": "言語",
-    "biography": "バイオグラフィー",
+    "home": "いらっしゃいませ",
     "programs": "プログラム",
     "discography": "ディスコグラフィー",
     "events": "イベント",
@@ -10,14 +10,14 @@
     "error404": "ページが存在しません"
   },
   "pages": {
-    "biography": "biography",
+    "home": "",
     "programs": "programs",
     "discography": "discography",
     "events": "events",
     "medias": "medias",
     "links": "links"
   },
-  "biography": {
+  "home": {
     "findOnline": "<a href=\"/links\" alt=\"artist-links\">インターネット</a>でギョーム ボーリューを検索"
   },
   "programs": {

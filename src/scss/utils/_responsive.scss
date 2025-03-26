@@ -54,7 +54,7 @@
     }
   }
 
-  body.biography {
+  body.home {
     main { 
       .biography-wrapper {
         grid-gap: var(--spacing);
@@ -112,9 +112,20 @@
     }
   }
 
-  body.biography {
+  body.home {
     main { 
-      .biography-wrapper { 
+      .whats-up-wrapper {
+        img {
+          height: inherit;
+          width: 100%;
+        }
+
+        .content {
+          max-width: inherit;
+        }
+      }
+
+      .biography-wrapper {
         .image-container .photo-select {
           margin-top: 0;
         }
@@ -125,8 +136,16 @@
   body.programs {
     main {
       .programs-wrapper {
+        row-gap: var(--spacing);
+
         .event {
+          grid-gap: var(--spacing);
           grid-template-columns: 1fr;
+          padding: var(--spacing);
+
+          h3 {
+            margin-bottom: var(--spacing);
+          }
         }
       }
     } 
@@ -258,6 +277,38 @@
 }
 
 @media (max-width: 700px) {
+  body.home {
+    main { 
+      .whats-up-wrapper {
+        height: inherit;
+
+        .news {
+          height: inherit;
+
+          .news-content {
+            flex-direction: column;
+
+            img {
+              height: inherit;
+              margin-bottom: var(--spacing);
+              width: 100%;
+            }
+
+            .content {
+              max-width: inherit;
+              padding-left: 0;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .biography-wrapper {
+        padding: var(--spacing);
+      }
+    }
+  }
+
   body.discography {
     main {
       .releases-wrapper {

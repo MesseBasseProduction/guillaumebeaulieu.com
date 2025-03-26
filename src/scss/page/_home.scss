@@ -75,3 +75,69 @@
     }
   }
 }
+
+.whats-up-wrapper {
+  height: 25rem;
+  margin-top: var(--spacing-large);
+  max-width: 66%;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+
+  .news {
+    color: white;
+    display: inline-block;
+    height: 25rem;
+    margin: 0;
+    margin-right: var(--spacing);
+    max-width: 850px;
+    text-decoration: none;
+    width: auto;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .news-content {
+    align-items: center;
+    background-color: rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    padding: var(--spacing);
+    width: fit-content;
+    white-space: initial;
+
+    img {
+      border-radius: .5rem;
+      height: calc(25rem - (2 * var(--spacing)));
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 425px;
+      padding-left: var(--spacing);
+
+      h3 {
+        margin-bottom: var(--spacing-small);
+        text-align: center;
+      }
+
+      p {
+        color: white;
+        display: inline-block;
+        margin: 0;
+        margin-bottom: var(--spacing-small);
+      }
+
+      a {
+        margin: 0;
+      }
+    }
+  }
+}

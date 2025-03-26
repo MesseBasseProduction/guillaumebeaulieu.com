@@ -3,7 +3,7 @@ const path = require('path');
 const compression = require('compression');
 const zlib = require('node:zlib');
 // App and preferences
-const version = '1.2.0';
+const version = '1.3.0';
 const port = 8040;
 const app = express();
 // Log server start
@@ -15,9 +15,9 @@ app.use(compression({
 }));
 
 // URL callbacks
-const biography = (req, res) => {
-  console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | 200 ${req.originalUrl} page requested, return biography.html`);
-  res.sendFile(path.join(__dirname, '../../assets/html/biography.html'));
+const home = (req, res) => {
+  console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | 200 ${req.originalUrl} page requested, return home.html`);
+  res.sendFile(path.join(__dirname, '../../assets/html/home.html'));
 };
 const programs = (req, res) => {
   console.log(`${(new Date()).toISOString()} | guillaumebeaulieu.com v${version} | 200 ${req.originalUrl} page requested, return programs.html`);
@@ -46,9 +46,9 @@ app.use('/assets', express.static(path.join(__dirname, '../../assets'), { // Ser
 }));
 
 // Page urls
-const biographyPage = ['/', '/biography', '/biographie', '/biografia'];
-for (let i = 0; i < biographyPage.length; ++i) {
-  app.get(biographyPage[i], biography);
+const homePage = ['/', '/accueil', '/home', '/inicio', '/startseite', '/iniziale', '/inicial', '/biography', '/biographie', '/biografia'];
+for (let i = 0; i < homePage.length; ++i) {
+  app.get(homePage[i], home);
 }
 
 const programsPage = ['/programs', '/programmes', '/programme', '/programas', '/programmi'];

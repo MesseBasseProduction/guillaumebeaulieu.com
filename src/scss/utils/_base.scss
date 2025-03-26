@@ -28,15 +28,28 @@ a {
   color: var(--color-main);
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+
+  &.button {
+    text-decoration: none;
+    width: auto;
+  }
 }
 
-button {
+button, a.button {
   background: rgba(255, 255, 255, .1);
   border: solid 1px #D4D4D4;
   border-radius: .5rem;
   color: #D4D4D4;
   cursor: pointer;
   padding: 1rem 2rem;
+
+  transition: all var(--transition);
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: rgba(255, 255, 255, .2);
+  }
 }
 
 select {

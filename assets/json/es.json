@@ -1,7 +1,7 @@
 {
   "nav": {
     "lang": "Idioma",
-    "biography": "Biografía",
+    "home": "Inicio",
     "programs": "Programas",
     "discography": "Discografía",
     "events": "Evento",
@@ -10,14 +10,14 @@
     "error404": "La página no existe"
   },
   "pages": {
-    "biography": "biografia",
+    "home": "",
     "programs": "programas",
     "discography": "discografia",
     "events": "evento",
     "medias": "medios",
     "links": "enlaces"
   },
-  "biography": {
+  "home": {
     "findOnline": "Encuentre a Guillaume Beaulieu <a href=\"/links\" alt=\"artist-links\">en Internet</a>."
   },
   "programs": {

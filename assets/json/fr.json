@@ -1,7 +1,7 @@
 {
   "nav": {
     "lang": "Langue",
-    "biography": "Biographie",
+    "home": "Accueil",
     "programs": "Programmes",
     "discography": "Discographie",
     "events": "Évènements",
@@ -10,14 +10,14 @@
     "error404": "Page inexistante"
   },
   "pages": {
-    "biography": "biographie",
+    "home": "",
     "programs": "programs",
     "discography": "discographie",
     "events": "evenements",
     "medias": "medias",
     "links": "liens"
   },
-  "biography": {
+  "home": {
     "findOnline": "Retrouvez Guillaume Beaulieu <a href=\"/links\" alt=\"artist-links\">sur internet</a>."
   },
   "programs": {
@@ -48,6 +48,7 @@
     "facebook": "Facebook",
     "fnac": "Fnac",
     "instagram": "Instagram",
+    "mbp": "Messe Basse Production",
     "musicbrainz": "MusicBrainz",
     "qobuz": "Qobuz",
     "soundcloud": "Soundcloud",

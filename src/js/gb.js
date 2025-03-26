@@ -52,7 +52,7 @@ class gb {
      * @type {String}
      * @private
      **/
-    this._version = '1.2.0';
+    this._version = '1.3.0';
 
     // Update debug flag if it is given in the url
     if (window.location.href.indexOf('?debug') !== -1) {
@@ -114,8 +114,8 @@ class gb {
             }
           }
           // Update nav and shared elements between pages
-          document.querySelector('#nls-nav-biography').innerHTML = this._nls.nav.biography;
-          document.querySelector('#nls-nav-biography').href = `/${this._nls.pages.biography}`;
+          document.querySelector('#nls-nav-home').innerHTML = this._nls.nav.home;
+          document.querySelector('#nls-nav-home').href = `/${this._nls.pages.home}`;
           document.querySelector('#nls-nav-programs').innerHTML = this._nls.nav.programs;
           document.querySelector('#nls-nav-programs').href = `/${this._nls.pages.programs}`;
           document.querySelector('#nls-nav-discography').innerHTML = this._nls.nav.discography;
@@ -196,8 +196,8 @@ class gb {
     if (DEBUG === true) { console.log(`    Build HTML DOM depending on the page type`); }
     return new Promise(resolve => {
       switch (document.body.dataset.type) {
-        case 'biography':
-          this._buildBiographyPage();
+        case 'home':
+          this._buildHomePage();
           break;
         case 'programs':
           this._buildProgramsPage();
@@ -225,21 +225,22 @@ class gb {
 
   /**
    * @method
-   * @name _buildBiographyPage
+   * @name _buildHomePage
    * @private
    * @memberof gb
    * @author Arthur Beaulieu
    * @since November 2024
    * @description <blockquote>
-   * Build the artist's Biography page according to info and pictures stored in internal <code>this._info</code> attribute.
+   * Build the artist's home page according to info and pictures stored in internal <code>this._info</code> attribute.
    * </blockquote> **/
-  _buildBiographyPage() {
-    if (DEBUG === true) { console.log(`    Init website with the artist biography page`); }    
-    // Update page title, short and full biography and call-to-action link
-    document.title = `Guillaume Beaulieu | ${this._nls.nav.biography}`;
+   _buildHomePage() {
+    if (DEBUG === true) { console.log(`    Init website with the artist home page`); }    
+    // Update page title
+    document.title = `Guillaume Beaulieu | ${this._nls.nav.home}`;
+    // Update short, full biography and call-to-action link
     document.querySelector('#nls-bio-short').innerHTML = this._info.bio.short[this._lang];
     document.querySelector('#nls-bio-content').innerHTML = this._info.bio.full[this._lang];
-    document.querySelector('#nls-bio-find-online').innerHTML = this._nls.biography.findOnline;
+    document.querySelector('#nls-bio-find-online').innerHTML = this._nls.home.findOnline;
     // Handle image slideshow
     const spans = document.querySelector('#photo-select').children;
     for (let i = 0; i < spans.length; ++i) {
@@ -251,6 +252,35 @@ class gb {
         document.querySelector('#artist-picture-path').src = `/assets/img/artists/${this._info.pictures.path[i]}`;
         document.querySelector('#artist-picture-author').textContent = this._info.pictures.author[i];
       });
+    }
+    // News
+    for (let i = 0; i < this._info.actus.length; ++i) {
+      const actu = document.createElement('A');
+      actu.classList.add('news');
+      actu.setAttribute('target', '_blank');
+      actu.setAttribute('rel', 'noreferrer noopener');
+      actu.href = this._info.actus[i].link;
+  
+      const container = document.createElement('DIV');
+      container.classList.add('news-content');
+  
+      const image = document.createElement('IMG');
+      image.src = this._info.actus[i].image;
+  
+      const content = document.createElement('DIV');
+      content.classList.add('content');
+    
+      content.innerHTML = `
+        <h3>${this._info.actus[i].title[this._lang]}</a></h3>
+        <p>${this._info.actus[i].description[this._lang]}</p>
+        <a href="${this._info.actus[i].link}" target="_blank" rel="noreferrer noopener" class="button">${this._info.actus[i].cta[this._lang]}</a>
+      `;
+      content.innerHTML.replace('\n', '');
+  
+      container.appendChild(image);
+      container.appendChild(content);
+      actu.appendChild(container);
+      document.querySelector('#whats-up-wrapper').appendChild(actu);
     }
   }
 

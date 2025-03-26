@@ -1,7 +1,7 @@
 {
   "nav": {
     "lang": "שפה",
-    "biography": "ביוגרפיה",
+    "home": "עמוד הבית",
     "programs": "תוכניות",
     "discography": "דיסקוגרפיה",
     "events": "דיסקוגרפיה",
@@ -10,14 +10,14 @@
     "error404": "העמוד אינו קיים"
   },
   "pages": {
-    "biography": "biography",
+    "home": "",
     "programs": "programs",
     "discography": "discography",
     "events": "events",
     "medias": "medias",
     "links": "links"
   },
-  "biography": {
+  "home": {
     "findOnline": "מצא את גיומב בוליו <a href=\"/links\" alt=\"artist-links\">באינטרנט</a>."
   },
   "programs": {

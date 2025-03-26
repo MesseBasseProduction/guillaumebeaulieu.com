@@ -1,7 +1,7 @@
 # guillaumebeaulieu.com
 
 [![License](https://img.shields.io/github/license/MesseBasseProduction/guillaumebeaulieu.com.svg)](https://github.com/MesseBasseProduction/guillaumebeaulieu.com/blob/master/LICENSE.md)
-![](https://badgen.net/badge/version/1.2.0/blue)
+![](https://badgen.net/badge/version/1.3.0/blue)
 
 Official website for Guillaume Beaulieu, baroque recorder player.
 This website offer several pages, allowing end-users to listen to released material, read biography and many more content related to the artist.
