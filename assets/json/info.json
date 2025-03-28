@@ -29,35 +29,35 @@
     {
       "title": {
         "fr": "Campagne de financement participatif<br>Enregistrement de disque",
-        "en": "Crowdfunding campain : Record  ",
-        "es": "",
-        "it": "",
-        "de": "",
-        "pt": "",
-        "he": "",
-        "ja": ""
+        "en": "Crowdfunding Campaign<br>Record production",
+        "es": "Campaña de crowdfunding<br>Grabación de disco",
+        "it": "Campagna di crowdfunding<br>Registrazione del disco",
+        "de": "Crowdfunding-Kampagne<br>Disc-Aufnahme",
+        "pt": "Campanha de crowdfunding<br>Gravação de disco",
+        "he": "קמפיין מימון המונים<br>הקלטת דיסקים",
+        "ja": "クラウドファンディングキャンペーン<br>ディスク記録"
       },
       "image": "/assets/img/actus/vinci.webp",
       "link": "https://www.helloasso.com/associations/messe-basse-production/collectes/guillaume-beaulieu-il-flauto-di-leonardo-production-de-disque",
       "description": {
         "fr": "Un projet ambitieux qui à pour but de fixer sur un disque des sonates méconnues de Leonardo Vinci, compositeur de la cour napolitaine. Pour y parvenir, je m'entoure de Antoine Touche au violoncelle et Thomas Soltani au clavecin.",
-        "en": "Crowdfunding campain : Record  ",
-        "es": "",
-        "it": "",
-        "de": "",
-        "pt": "",
-        "he": "",
-        "ja": ""
+        "en": "An ambitious project aimed at recording little-known sonatas by Leonardo Vinci, composer of the Neapolitan court. To achieve this, I'm partnering with Antoine Touche on the cello and Thomas Soltani on the harpsichord.",
+        "es": "Un ambicioso proyecto que pretende grabar en un disco sonatas poco conocidas de Leonardo Vinci, compositor de la corte napolitana. Para lograrlo, me rodeo de Antoine Touche al violonchelo y Thomas Soltani al clavecín.",
+        "it": "Un progetto ambizioso che punta a registrare su disco le sonate poco conosciute di Leonardo Vinci, compositore della corte napoletana. Per raggiungere questo obiettivo, mi circondo di Antoine Touche al violoncello e Thomas Soltani al clavicembalo.",
+        "de": "Ein ehrgeiziges Projekt, dessen Ziel es ist, wenig bekannte Sonaten von Leonardo Vinci, dem Komponisten des neapolitanischen Hofes, auf einer CD festzuhalten. Um dies zu erreichen, umgebe ich mich mit Antoine Touche am Cello und Thomas Soltani am Cembalo.",
+        "pt": "Um ambicioso projeto que visa gravar em disco sonatas pouco conhecidas de Leonardo Vinci, compositor da corte napolitana. Para isso, rodeio-me de Antoine Touche no violoncelo e de Thomas Soltani no cravo.",
+        "he": "פרויקט שאפתני שמטרתו להקליט על דיסק סונטות לא ידועות מאת ליאונרדו וינצ'י, מלחין החצר הנפוליטנית. כדי להשיג זאת, אני מקיף את עצמי באנטואן טאצ'ה בצ'לו ובתומס סולטאני בצ'מבלו.",
+        "ja": "ナポリ宮廷の作曲家、レオナルド・ヴィンチのあまり知られていないソナタをディスクに記録するという野心的なプロジェクト。これを達成するために、私はチェロのアントワーヌ・トゥーシュとチェンバロのトーマス・ソルターニに囲まれています。"
       },
       "cta": {
-        "fr": "Deviens mécène du disque!",
-        "en": "Crowdfunding campain : Record  ",
-        "es": "",
-        "it": "",
-        "de": "",
-        "pt": "",
-        "he": "",
-        "ja": ""
+        "fr": "Devenez mécène!",
+        "en": "Become a patron!",
+        "es": "¡Conviértete en mecenas!",
+        "it": "Diventa un mecenate!",
+        "de": "Werden Sie Gönner!",
+        "pt": "Torne-se um patrono!",
+        "he": "הפוך לפטרון!",
+        "ja": "パトロンになりましょう！"
       }
     }
   ],

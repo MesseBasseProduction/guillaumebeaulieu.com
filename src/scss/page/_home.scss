@@ -108,6 +108,7 @@
     cursor: pointer;
     display: flex;
     padding: var(--spacing);
+    padding-right: 0;
     width: fit-content;
     white-space: initial;
 
@@ -121,7 +122,7 @@
       flex-direction: column;
       justify-content: space-between;
       max-width: 425px;
-      padding-left: var(--spacing);
+      padding: 0 var(--spacing);
 
       h3 {
         margin-bottom: var(--spacing-small);
