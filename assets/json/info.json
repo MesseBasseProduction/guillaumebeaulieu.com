@@ -169,7 +169,7 @@
       "links": [
         {
           "type": "youtube",
-          "url": ""
+          "url": "https://www.youtube.com/watch?v=ecxSzE65e1Q&list=PLCyDwfZrEyi7DFwtTHq8Sqt3roVYLlxFA"
         }, {
           "type": "spotify",
           "url": "https://open.spotify.com/album/6FiC0AWI04Qrp5xeJeBytf"
@@ -298,7 +298,7 @@
     {
       "title": "Enregistrement de disque",
       "image": "/assets/img/events/2025-07-13.webp",
-      "date": "2025-07-13",
+      "date": "2025-07-17",
       "place": "Église Notre-Dame-de-la-Nativité-de-la-Vierge, Sermaise",
       "link": "https://www.helloasso.com/associations/messe-basse-production/collectes/guillaume-beaulieu-il-flauto-di-leonardo-production-de-disque",
       "description": {
