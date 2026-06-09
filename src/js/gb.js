@@ -253,7 +253,9 @@ class gb {
         document.querySelector('#artist-picture-author').textContent = this._info.pictures.author[i];
       });
     }
-    // News
+    // News (uncomment when needed)
+    document.querySelector('#whats-up-wrapper').parentNode.removeChild(document.querySelector('#whats-up-wrapper'));
+/*
     for (let i = 0; i < this._info.actus.length; ++i) {
       const actu = document.createElement('A');
       actu.classList.add('news');
@@ -282,6 +284,7 @@ class gb {
       actu.appendChild(container);
       document.querySelector('#whats-up-wrapper').appendChild(actu);
     }
+*/
   }
 
 
